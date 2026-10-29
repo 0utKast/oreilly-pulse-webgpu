@@ -1156,7 +1156,86 @@ function bindEvents() {
   });
 }
 
+function setupSecureContextAutoRedirect() {
+  const host = window.location.hostname.toLowerCase();
+  if (host === 'localhost' || host === '127.0.0.1') return;
+
+  const port = window.location.port || '3050';
+  const isMac = /Macintosh|Mac OS X/i.test(navigator.userAgent);
+  const targetOrigin = isMac ? `http://localhost:${port}` : `http://127.0.0.1:${port}`;
+  const netshCmd = `netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=${port} connectaddress=${host} connectport=${port}`;
+
+  const tryRedirectToLoopback = async () => {
+    try {
+      const res = await fetch(`${targetOrigin}/api/ping?from=lan`, {
+        mode: 'cors',
+        cache: 'no-store'
+      });
+      if (res.ok) {
+        window.location.replace(`${targetOrigin}${window.location.pathname}${window.location.search}${window.location.hash}`);
+        return true;
+      }
+    } catch {}
+    return false;
+  };
+
+  tryRedirectToLoopback().then((redirected) => {
+    if (redirected) return;
+
+    // Mostrar aviso de activación en 1 clic si aún no está registrado el portproxy del puerto 3050 en Windows
+    const mainCol = document.querySelector('.main-workspace');
+    if (mainCol && !document.getElementById('secureTunnelBanner')) {
+      const banner = document.createElement('div');
+      banner.id = 'secureTunnelBanner';
+      banner.style.cssText =
+        'display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 18px;background:rgba(220,38,38,0.14);border-bottom:1px solid rgba(220,38,38,0.38);font-size:12.5px;color:var(--text-primary);';
+      banner.innerHTML = `
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <span>🔒 <strong>Quitar aviso «No es seguro» y activar WebGPU en Windows (igual que Feedly):</strong></span>
+          <span style="color:var(--text-secondary);">Redirige <code>http://127.0.0.1:${port}</code> a este Mac de forma permanente.</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <a href="/activar-windows-seguro.bat" class="btn-primary btn-sm" style="text-decoration:none;display:inline-flex;align-items:center;gap:5px;">
+            ⬇ Descargar Activador 1-Clic (.bat)
+          </a>
+          <button type="button" id="copyNetshBtn" class="btn-secondary btn-sm">
+            📋 Copiar comando PowerShell
+          </button>
+        </div>
+      `;
+      mainCol.insertBefore(banner, mainCol.firstChild);
+
+      const copyBtn = document.getElementById('copyNetshBtn');
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(netshCmd);
+          } else {
+            const ta = document.createElement('textarea');
+            ta.value = netshCmd;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+          }
+          copyBtn.textContent = '✓ Comando copiado (Pégalo en PowerShell Admin)';
+          setTimeout(() => {
+            copyBtn.textContent = '📋 Copiar comando PowerShell';
+          }, 3000);
+        });
+      }
+    }
+
+    // Sondear cada 2.5 s para que en cuanto se ejecute el .bat o el comando netsh en Windows, salte solo a 127.0.0.1:3050
+    const pollId = setInterval(async () => {
+      const ok = await tryRedirectToLoopback();
+      if (ok) clearInterval(pollId);
+    }, 2500);
+  });
+}
+
 window.addEventListener('DOMContentLoaded', async () => {
+  setupSecureContextAutoRedirect();
   bindEvents();
   await fetchBootstrap();
   await fetchItems();

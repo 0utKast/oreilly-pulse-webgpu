@@ -1359,7 +1359,11 @@ function sendJson(res, status, payload) {
   const body = JSON.stringify(payload);
   res.writeHead(status, {
     'Content-Type': 'application/json; charset=utf-8',
-    'Cache-Control': 'no-store'
+    'Cache-Control': 'no-store',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Private-Network': 'true'
   });
   res.end(body);
 }
@@ -1395,10 +1399,97 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer(async (req, res) => {
-  const parsedUrl = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  const hostHeader = String(req.headers.host || 'localhost');
+  const hostnameOnly = hostHeader.split(':')[0].toLowerCase();
+  const userAgent = String(req.headers['user-agent'] || '');
+  const remoteAddr = String(req.socket.remoteAddress || '');
+  const isRemoteClient =
+    remoteAddr !== '127.0.0.1' &&
+    remoteAddr !== '::1' &&
+    remoteAddr !== '::ffff:127.0.0.1';
+
+  // Preflight CORS + Private Network Access (para salto automático de IP LAN -> 127.0.0.1 en Chrome Windows)
+  if (req.method === 'OPTIONS') {
+    res.writeHead(204, {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PATCH, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Private-Network': 'true'
+    });
+    return res.end();
+  }
+
+  // Si llega tráfico desde el PC Windows a través de 127.0.0.1:3050 (portproxy ya activo), registrarlo
+  if (isRemoteClient && (hostnameOnly === '127.0.0.1' || hostnameOnly === 'localhost')) {
+    try {
+      db.prepare("INSERT OR REPLACE INTO meta_settings (key, value) VALUES ('windows_portproxy_ready', '1')").run();
+    } catch {}
+  }
+
+  const parsedUrl = new URL(req.url, `http://${hostHeader}`);
   const pathname = parsedUrl.pathname;
 
   try {
+    // 0a. Ping de verificación de contexto seguro (127.0.0.1:3050 / localhost:3050)
+    if (req.method === 'GET' && pathname === '/api/ping') {
+      if (parsedUrl.searchParams.get('from') === 'lan' || isRemoteClient) {
+        try {
+          db.prepare("INSERT OR REPLACE INTO meta_settings (key, value) VALUES ('windows_portproxy_ready', '1')").run();
+        } catch {}
+      }
+      return sendJson(res, 200, { ok: true, service: 'oreilly-pulse', port: PORT });
+    }
+
+    // 0b. Descarga directa del activador de 1 clic para Windows (netsh interface portproxy -> 127.0.0.1:3050)
+    if (req.method === 'GET' && pathname === '/activar-windows-seguro.bat') {
+      const macIp = (process.env.LAN_BOOKMARK_HOST || '192.168.1.225').trim();
+      const batLines = [
+        '@echo off',
+        'chcp 65001 >nul',
+        'title O\'Reilly Pulse - Activador de Modo Seguro (127.0.0.1:3050)',
+        'net session >nul 2>&1',
+        'if %errorLevel% neq 0 (',
+        '  echo Solicitando permiso de Administrador para activar el enlace seguro http://127.0.0.1:3050 ...',
+        '  powershell -NoProfile -Command "Start-Process -FilePath \'%~f0\' -Verb RunAs"',
+        '  exit /b',
+        ')',
+        'echo ====================================================================',
+        'echo   O\'Reilly Pulse - Configurando Enlace Seguro en Windows (WebGPU)',
+        `echo   Tunel Permanente: http://127.0.0.1:${PORT}  -->  Mac (${macIp}:${PORT})`,
+        'echo ====================================================================',
+        `netsh interface portproxy delete v4tov4 listenaddress=127.0.0.1 listenport=${PORT} >nul 2>&1`,
+        `netsh interface portproxy add v4tov4 listenaddress=127.0.0.1 listenport=${PORT} connectaddress=${macIp} connectport=${PORT}`,
+        'echo.',
+        'echo Tuneles portproxy activos en este PC con Windows:',
+        'netsh interface portproxy show v4tov4',
+        'echo.',
+        `echo Listo! Abriendo http://127.0.0.1:${PORT} sin aviso "No es seguro"...`,
+        `start "" "http://127.0.0.1:${PORT}"`,
+        'timeout /t 2 >nul'
+      ];
+      res.writeHead(200, {
+        'Content-Type': 'application/octet-stream',
+        'Content-Disposition': 'attachment; filename="activar-windows-seguro.bat"',
+        'Cache-Control': 'no-store'
+      });
+      return res.end(batLines.join('\r\n'));
+    }
+
+    // 0c. Redirección automática desde IP de red local (192.168.1.225) hacia loopback seguro (localhost / 127.0.0.1)
+    // Exactamente igual que en feedly_clon para eliminar el aviso "No es seguro" y habilitar WebGPU nativo
+    if (hostnameOnly !== 'localhost' && hostnameOnly !== '127.0.0.1' && !parsedUrl.searchParams.has('staylan')) {
+      if (/Macintosh|Mac OS X/i.test(userAgent)) {
+        res.writeHead(302, { Location: `http://localhost:${PORT}${req.url || '/'}` });
+        return res.end();
+      }
+      if (/Windows/i.test(userAgent)) {
+        const winReady = db.prepare("SELECT value FROM meta_settings WHERE key = 'windows_portproxy_ready'").get()?.value === '1';
+        if (winReady) {
+          res.writeHead(302, { Location: `http://127.0.0.1:${PORT}${req.url || '/'}` });
+          return res.end();
+        }
+      }
+    }
     // 1. Resumen de Estado, Contadores de Canales y Áreas Técnicas
     if (req.method === 'GET' && pathname === '/api/bootstrap') {
       await detectOllama();
