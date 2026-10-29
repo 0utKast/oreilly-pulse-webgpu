@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# SQLite runtime files & logs
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm
+data/*.log
+node_modules/

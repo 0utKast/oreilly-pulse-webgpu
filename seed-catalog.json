@@ -1,0 +1,2176 @@
+{
+  "defaultTopics": [
+    {
+      "slug": "ai-agents-mcp",
+      "name": "Agentes IA & Protocolo MCP",
+      "icon": "🤖",
+      "color": "#dc2626",
+      "mcp_query": "AI Agents Model Context Protocol MCP agentic",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "is_preset": 1,
+      "sort_order": 1
+    },
+    {
+      "slug": "software-arch",
+      "name": "Arquitectura de Software & Patrones",
+      "icon": "🏛️",
+      "color": "#2563eb",
+      "mcp_query": "Software Architecture system design microservices patterns",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "is_preset": 1,
+      "sort_order": 2
+    },
+    {
+      "slug": "webgpu-cpp-rust",
+      "name": "WebGPU, C++26, Rust & Wasm",
+      "icon": "⚡",
+      "color": "#7c3aed",
+      "mcp_query": "C++ Rust GPU WebAssembly systems programming",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "is_preset": 1,
+      "sort_order": 3
+    },
+    {
+      "slug": "data-rag",
+      "name": "Ingeniería de Datos, RAG & Vector DBs",
+      "icon": "🗄️",
+      "color": "#059669",
+      "mcp_query": "RAG Data Engineering Lakehouse Vector Database PostgreSQL",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "is_preset": 1,
+      "sort_order": 4
+    },
+    {
+      "slug": "security-gov",
+      "name": "Seguridad, DevSecOps & Gobernanza IA",
+      "icon": "🛡️",
+      "color": "#d97706",
+      "mcp_query": "Security Cybersecurity AI Governance Zero Trust DevSecOps",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "is_preset": 1,
+      "sort_order": 5
+    },
+    {
+      "slug": "cloud-observability",
+      "name": "Linux, Kubernetes & Observabilidad",
+      "icon": "☁️",
+      "color": "#0891b2",
+      "mcp_query": "Linux Kubernetes Cloud Native Observability OpenTelemetry",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "is_preset": 1,
+      "sort_order": 6
+    }
+  ],
+  "presetCatalogTopics": [
+    {
+      "slug": "tim-oreilly-loukides",
+      "name": "Tim O'Reilly & Mike Loukides (Radar)",
+      "icon": "🎙️",
+      "color": "#b91c1c",
+      "mcp_query": "*",
+      "content_types": [
+        "books",
+        "videos",
+        "articles",
+        "playlists"
+      ],
+      "author_filter": [
+        "Tim O'Reilly",
+        "Mike Loukides"
+      ],
+      "publisher_filter": [],
+      "description": "Todas las charlas Live with Tim O’Reilly y los informes mensuales Radar Trends to Watch de Mike Loukides."
+    },
+    {
+      "slug": "context-evals",
+      "name": "Context Engineering, Prompts & Evals",
+      "icon": "🧠",
+      "color": "#9333ea",
+      "mcp_query": "AI Context Engineering Evals Prompt LLM Evaluation",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "description": "Ingeniería de contexto, evaluación sistemática de agentes (Evals), memoria episódica y reducción de deuda de prompts."
+    },
+    {
+      "slug": "modern-web-perf",
+      "name": "Web Moderna, TypeScript & Performance",
+      "icon": "🌐",
+      "color": "#0284c7",
+      "mcp_query": "Web Performance TypeScript React Micro-Frontends",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "description": "Rendimiento web en la era de la IA, micro-frontends, JavaScript moderno y arquitectura frontend."
+    },
+    {
+      "slug": "python-fastapi-dspy",
+      "name": "Python, FastAPI & DSPy Agéntico",
+      "icon": "🐍",
+      "color": "#16a34a",
+      "mcp_query": "Python FastAPI DSPy AI Agents async",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "description": "Desarrollo de pipelines declarativos con DSPy, microservicios con FastAPI y agentes autónomos en Python."
+    },
+    {
+      "slug": "postgres-databases",
+      "name": "PostgreSQL, Vector DBs & Motores SQL",
+      "icon": "🐘",
+      "color": "#0d9488",
+      "mcp_query": "PostgreSQL Vector Database Time-Series Graph OLAP",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "description": "Colas de tareas en PostgreSQL, índices vectoriales HNSW, bases de datos columnares y grafos."
+    },
+    {
+      "slug": "ford-richards-arch",
+      "name": "Neal Ford & Mark Richards (Arquitectura)",
+      "icon": "📐",
+      "color": "#1d4ed8",
+      "mcp_query": "*",
+      "content_types": [
+        "books",
+        "videos",
+        "live-events",
+        "playlists"
+      ],
+      "author_filter": [
+        "Neal Ford",
+        "Mark Richards"
+      ],
+      "publisher_filter": [],
+      "description": "Seguimiento directo de los cursos en vivo, Superstreams y libros de patrones y antipatrones de arquitectura."
+    },
+    {
+      "slug": "agentic-red-teaming",
+      "name": "Ataques a MCP & Red Teaming de IA",
+      "icon": "🔐",
+      "color": "#e11d48",
+      "mcp_query": "Breaking Model Context Protocol Agentic Attacks Cybersecurity",
+      "content_types": [],
+      "author_filter": [],
+      "publisher_filter": [],
+      "description": "Auditoría ofensiva y defensiva de servidores MCP, inyección indirecta de prompts y suministro autónomo seguro."
+    },
+    {
+      "slug": "interactive-labs",
+      "name": "Laboratorios Interactivos & Sandboxes",
+      "icon": "🧪",
+      "color": "#4f46e5",
+      "mcp_query": "*",
+      "content_types": [
+        "interactive"
+      ],
+      "author_filter": [],
+      "publisher_filter": [],
+      "description": "Escenarios prácticos guiados y entornos sandbox ejecutables en el navegador (Kubernetes CKA, PostgreSQL, Linux)."
+    },
+    {
+      "slug": "audiobooks-leadership",
+      "name": "Audiolibros Técnicos & Liderazgo",
+      "icon": "🎧",
+      "color": "#c026d3",
+      "mcp_query": "*",
+      "content_types": [
+        "audiobooks"
+      ],
+      "author_filter": [],
+      "publisher_filter": [],
+      "description": "Colección de audiolibros completos en O’Reilly sobre ingeniería de software efectiva, estrategia y gestión."
+    },
+    {
+      "slug": "certifications-prep",
+      "name": "Certificaciones Oficiales & Exam Prep",
+      "icon": "🏅",
+      "color": "#ca8a04",
+      "mcp_query": "*",
+      "content_types": [
+        "certifications"
+      ],
+      "author_filter": [],
+      "publisher_filter": [],
+      "description": "Exámenes de práctica oficiales (Claude Certified Architect, Azure AI-102, CompTIA SecurityX, KCNA)."
+    }
+  ],
+  "items": [
+    {
+      "ourn": "urn:orm:book:0642572467692",
+      "title": "Radar Trends to Watch: October 2026",
+      "title_es": "Tendencias del Radar de O’Reilly: Octubre 2026",
+      "authors": [
+        "Mike Loukides"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "radar-report",
+      "channel_bucket": "radar",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "radar",
+        "trends",
+        "ai-agents",
+        "mcp",
+        "security"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572467692/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572467692/",
+      "publication_date": "2026-10-13",
+      "page_count": 5,
+      "is_report": 1,
+      "summary_es": "Análisis mensual de Mike Loukides sobre los hitos tecnológicos de octubre de 2026: la consolidación del protocolo MCP como capa universal de herramientas para agentes, el auge del \"Harness Engineering\" frente al simple ajuste de prompts, los modelos de voz locales (Local Voice AI) y los nuevos vectores de ataque en cadenas de suministro agénticas.",
+      "summary_en": "Monthly synthesis by Mike Loukides tracking key signals across AI agents, harness engineering, local voice models, and software security in October 2026.",
+      "toc": [
+        "1. Inteligencia Artificial y el giro hacia el Harness Engineering",
+        "2. Memoria Episódica y Persistente en Sistemas Multi-Agente",
+        "3. Seguridad: Defensas frente a la manipulación de herramientas MCP",
+        "4. Computación Local: Modelos de voz y visión en el borde (Edge AI)",
+        "5. Soberanía de Datos e Infraestructura Abierta en Europa y Norteamérica"
+      ],
+      "glossary": [
+        {
+          "term": "Harness Engineering",
+          "category": "Arquitectura IA",
+          "definition": "Disciplina de diseño del entorno de ejecución determinista (validadores, sandboxes, gestión de estado y reintentos) que envuelve a un modelo fundacional para garantizar fiabilidad en producción."
+        },
+        {
+          "term": "Weak Signals (Señales Débiles)",
+          "category": "Vigilancia Tecnológica",
+          "definition": "Indicadores tempranos en repositorios, artículos de investigación o startups que anticipan cambios estructurales antes de su adopción masiva."
+        },
+        {
+          "term": "Soberanía de IA (AI Sovereignty)",
+          "category": "Gobernanza",
+          "definition": "Capacidad de una organización o jurisdicción para controlar el ciclo completo de sus datos, pesos de modelos e infraestructura de inferencia sin dependencias críticas externas."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572428914",
+      "title": "Radar Trends to Watch: August 2026",
+      "title_es": "Tendencias del Radar de O’Reilly: Agosto 2026",
+      "authors": [
+        "Mike Loukides"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "radar-report",
+      "channel_bucket": "radar",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "radar",
+        "trends",
+        "open-source-ai"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572428914/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572428914/",
+      "publication_date": "2026-08-11",
+      "page_count": 10,
+      "is_report": 1,
+      "summary_es": "Edición extendida de verano de O’Reilly Radar centrada en el fenómeno de la \"Deuda de Prompts\" (Prompt Debt), la madurez de los modelos de pesos abiertos (Open Weights) para programación asistida y la transición desde chatbots conversacionales hacia flujos de trabajo autónomos verificables.",
+      "summary_en": "August 2026 edition of O’Reilly Radar Trends examining prompt debt, open-weight coding models, and autonomous engineering workflows.",
+      "toc": [
+        "1. El coste oculto de la Deuda de Prompts en grandes bases de código",
+        "2. Ecosistemas Open Source AI tras AI Codecon 2026",
+        "3. Observabilidad de Agentes: Trazabilidad con OpenTelemetry",
+        "4. Nuevos paradigmas en bases de datos vectoriales y relacionales híbridas"
+      ],
+      "glossary": [
+        {
+          "term": "Prompt Debt (Deuda de Prompts)",
+          "category": "Ingeniería IA",
+          "definition": "Fragilidad acumulada en un sistema cuando la lógica de negocio crítica se codifica en instrucciones textuales ad-hoc acopladas a un único versión de modelo."
+        },
+        {
+          "term": "Open-Weight Models",
+          "category": "Modelos IA",
+          "definition": "Modelos cuyos parámetros entrenados son públicos y descargables para inferencia local o ajuste fino privado."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572412548",
+      "title": "Radar Trends to Watch: July 2026",
+      "title_es": "Tendencias del Radar de O’Reilly: Julio 2026",
+      "authors": [
+        "Mike Loukides"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "radar-report",
+      "channel_bucket": "radar",
+      "topic_slug": "software-arch",
+      "tags": [
+        "radar",
+        "trends",
+        "resilience"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572412548/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572412548/",
+      "publication_date": "2026-07-14",
+      "page_count": 5,
+      "is_report": 1,
+      "summary_es": "Informe de julio de 2026 donde Mike Loukides examina la resiliencia de sistemas agénticos ante caídas o retiradas de modelos fundacionales, el auge de WebAssembly en el servidor y las prácticas de evaluación continua (Evals) en equipos de producto.",
+      "summary_en": "July 2026 Radar report covering agent resilience, server-side WebAssembly, and continuous evaluation practices.",
+      "toc": [
+        "1. Resiliencia ante el \"Bus Factor\" de los modelos fundacionales",
+        "2. WebAssembly fuera del navegador: Microservicios universales",
+        "3. Criptografía post-cuántica y seguridad en el transporte"
+      ],
+      "glossary": [
+        {
+          "term": "Model Bus Factor",
+          "category": "Resiliencia DevOps",
+          "definition": "Riesgo operativo de que un flujo de trabajo colapse si el proveedor de un modelo de IA revoca el acceso o depreca un checkpoint específico."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:article:53863MIT68208",
+      "title": "How to Outcompete Your Client's AI",
+      "title_es": "Cómo superar en valor a la IA de tus propios clientes",
+      "authors": [
+        "José Parra-Moyano",
+        "Karl Schmedders",
+        "Olivier Laplace",
+        "Benjamin Torben-Nielsen"
+      ],
+      "publishers": [
+        "MIT Sloan Management Review"
+      ],
+      "display_format": "article",
+      "marketing_type": "article",
+      "channel_bucket": "radar",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "strategy",
+        "ai-business",
+        "article"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/53863MIT68208/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/53863MIT68208/",
+      "publication_date": "2026-09-29",
+      "page_count": 5,
+      "summary_es": "Artículo estratégico publicado en MIT Sloan Management Review dentro de O’Reilly que analiza cómo las empresas de servicios técnicos y consultoría deben rediseñar su propuesta de valor cuando sus propios clientes ya disponen de agentes de IA internos.",
+      "summary_en": "Strategic analysis on how technical service providers must redesign their value proposition when clients deploy their own internal AI agents.",
+      "toc": [
+        "1. La comoditización del análisis preliminar mediante LLMs",
+        "2. Datos propietarios y ejecución verificada como foso defensivo",
+        "3. De vender horas de desarrollo a operar arquitecturas de resultados"
+      ],
+      "glossary": [
+        {
+          "term": "Asimetría de Contexto",
+          "category": "Estrategia IA",
+          "definition": "Ventaja competitiva derivada de poseer datos operativos verificados y pipelines de validación que un modelo genérico del cliente no puede replicar."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:article:53863MIT68210",
+      "title": "When AI Disruption Never Ends",
+      "title_es": "Cuando la disrupción de la IA se vuelve permanente",
+      "authors": [
+        "Rory McDonald",
+        "Will Drover"
+      ],
+      "publishers": [
+        "MIT Sloan Management Review"
+      ],
+      "display_format": "article",
+      "marketing_type": "article",
+      "channel_bucket": "radar",
+      "topic_slug": "software-arch",
+      "tags": [
+        "innovation",
+        "leadership",
+        "article"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/53863MIT68210/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/53863MIT68210/",
+      "publication_date": "2026-09-10",
+      "page_count": 5,
+      "summary_es": "Estudio sobre cómo gestionar organizaciones de ingeniería sometidas a ciclos de obsolescencia de herramientas cada pocos meses, evitando la fatiga de adopción y priorizando abstracciones duraderas.",
+      "summary_en": "Study on leading engineering organizations through continuous AI tool churn by prioritizing durable architectural abstractions.",
+      "toc": [
+        "1. El síndrome de fatiga por cambio constante de herramientas",
+        "2. Capas de aislamiento arquitectónico frente a la volatilidad de modelos",
+        "3. Métricas reales de productividad frente a la ilusión de velocidad"
+      ],
+      "glossary": [
+        {
+          "term": "Capas de Aislamiento Agéntico",
+          "category": "Arquitectura",
+          "definition": "Uso de protocolos estándar como MCP para desacoplar las herramientas del negocio del proveedor concreto de inferencia."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:article:53863MIT68129",
+      "title": "Building on AI’s Unfinished Foundation",
+      "title_es": "Construyendo sobre los cimientos aún inacabados de la IA",
+      "authors": [
+        "Kevin J. Boudreau"
+      ],
+      "publishers": [
+        "MIT Sloan Management Review"
+      ],
+      "display_format": "article",
+      "marketing_type": "article",
+      "channel_bucket": "radar",
+      "topic_slug": "software-arch",
+      "tags": [
+        "architecture",
+        "ai-foundations",
+        "article"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/53863MIT68129/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/53863MIT68129/",
+      "publication_date": "2026-08-26",
+      "page_count": 7,
+      "summary_es": "Análisis riguroso de los principios de diseño modular que permiten construir plataformas empresariales sólidas sobre tecnologías de IA cuyos estándares e interfaces cambian trimestralmente.",
+      "summary_en": "Architectural principles for building modular enterprise platforms on top of rapidly shifting AI foundations.",
+      "toc": [
+        "1. Modularidad y contratos explícitos en sistemas híbridos deterministas-probabilísticos",
+        "2. Gestión del riesgo técnico en arquitecturas en evolución",
+        "3. Casos de estudio de plataformas resilientes"
+      ],
+      "glossary": [
+        {
+          "term": "Frontera Determinista-Probabilística",
+          "category": "Diseño de Sistemas",
+          "definition": "Punto de corte arquitectónico donde la salida estocástica de un LLM es validada por esquemas estrictos antes de mutar el estado del sistema."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572182885",
+      "title": "Model Context Protocol (MCP) for Software Engineers",
+      "title_es": "Model Context Protocol (MCP) para Ingenieros de Software",
+      "authors": [
+        "Sergio Pereira"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "live course",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "structured-learning",
+        "mcp",
+        "agents",
+        "json-rpc"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572182885/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572182885/",
+      "publication_date": "2026-09-03",
+      "live_event_start_dates": [
+        "2026-11-03T15:00:00Z"
+      ],
+      "summary_es": "Curso práctico en directo impartido por Sergio Pereira para dominar la arquitectura del protocolo MCP (Host, Client, Server sobre JSON-RPC 2.0), la creación de servidores MCP propios con Tools, Resources y Prompts, y su despliegue seguro en entornos de producción.",
+      "summary_en": "Hands-on live course by Sergio Pereira covering Model Context Protocol architecture, custom MCP servers, tools, resources, and secure production deployment.",
+      "toc": [
+        "Módulo 1: Del problema de fragmentación N×M al estándar unificado N+M con MCP",
+        "Módulo 2: Transporte stdio vs Streamable HTTP / SSE y ciclo de vida JSON-RPC 2.0",
+        "Módulo 3: Implementación práctica de Tools, Resources y Prompts dinámicos",
+        "Módulo 4: Autenticación OAuth 2.1, mcp-remote y control de permisos en producción"
+      ],
+      "glossary": [
+        {
+          "term": "Transporte stdio MCP",
+          "category": "Protocolo MCP",
+          "definition": "Mecanismo de comunicación local donde el Host lanza el servidor MCP como subproceso e intercambia tramas JSON-RPC 2.0 delimitadas por saltos de línea."
+        },
+        {
+          "term": "Primitivas MCP (Tools / Resources / Prompts)",
+          "category": "Protocolo MCP",
+          "definition": "Los tres bloques canónicos del protocolo: funciones ejecutables controladas por el modelo (Tools), datos de contexto controlados por la aplicación (Resources) y plantillas de interacción controladas por el usuario (Prompts)."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572450625",
+      "title": "AI Startup Spotlight",
+      "title_es": "AI Startup Spotlight: Demos y Arquitecturas Disruptivas en Vivo",
+      "authors": [
+        "Gabriela de Queiroz",
+        "Itamar Friedman"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "special event",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "special-event",
+        "startups",
+        "ai-agents"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572450625/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572450625/",
+      "publication_date": "2026-08-19",
+      "live_event_start_dates": [
+        "2026-11-05T15:00:00Z",
+        "2026-12-03T15:00:00Z"
+      ],
+      "summary_es": "Evento especial conducido por Gabriela de Queiroz e Itamar Friedman donde fundadores técnicos muestran en directo las arquitecturas internas de las startups de IA más innovadoras del trimestre, con foco en revisión de código agéntica e integridad de software.",
+      "summary_en": "Special live event hosted by Gabriela de Queiroz and Itamar Friedman showcasing technical founders and cutting-edge AI startup architectures.",
+      "toc": [
+        "Sesión 1: Arquitecturas de verificación formal y testing autónomo con agentes",
+        "Sesión 2: Demos técnicas en directo y disección del stack de inferencia",
+        "Sesión 3: Coloquio abierto y preguntas de la comunidad con los fundadores"
+      ],
+      "glossary": [
+        {
+          "term": "Agentic Code Integrity",
+          "category": "Ingeniería de Software",
+          "definition": "Conjunto de invariantes, pruebas de propiedades y análisis estático que validan automáticamente el código generado por agentes antes de integrarlo."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572442064",
+      "title": "Expert Showcase: Building AI Workflows That Stick",
+      "title_es": "Expert Showcase: Construyendo Flujos de Trabajo de IA Duraderos",
+      "authors": [
+        "Marily Nika",
+        "Mark Kashef",
+        "Katie Parrott",
+        "Nicolette Stepakoff",
+        "Anjuan Simmons",
+        "Owen Williams",
+        "Daniel Blum"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "conference",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "conference",
+        "showcase",
+        "workflows"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572442064/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572442064/",
+      "publication_date": "2026-07-31",
+      "live_event_start_dates": [
+        "2026-11-10T16:00:00Z"
+      ],
+      "summary_es": "Conferencia virtual interactiva con 7 expertos de la industria sobre cómo pasar de prototipos llamativos a flujos de trabajo agénticos que se mantienen estables en el día a día de los equipos de ingeniería y producto.",
+      "summary_en": "Virtual conference with 7 industry practitioners focused on designing durable, production-grade AI workflows.",
+      "toc": [
+        "Apertura: Por qué fracasan el 70% de los flujos agénticos tras la primera demo (Marily Nika)",
+        "Ponencia 2: Diseño de bucles Human-in-the-Loop sin fricción cognitiva (Owen Williams)",
+        "Ponencia 3: Orquestación determinista y control de costes de tokens (Mark Kashef)",
+        "Mesa Redonda: Métricas de adopción real en equipos de ingeniería (Anjuan Simmons)"
+      ],
+      "glossary": [
+        {
+          "term": "Frictionless HITL (Human-in-the-Loop)",
+          "category": "UX Agéntica",
+          "definition": "Diseño de puntos de supervisión humana donde el operador aprueba o corrige decisiones del agente con contexto diferencial inmediato."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572464561",
+      "title": "Agent Skills Live",
+      "title_es": "Agent Skills Live: Diseño de Habilidades Modulares para Agentes",
+      "authors": [
+        "Lucas Soares",
+        "Louis-Francois Bouchard"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "special event",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "special-event",
+        "agent-skills",
+        "mcp"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572464561/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572464561/",
+      "publication_date": "2026-09-22",
+      "live_event_start_dates": [
+        "2026-11-10T16:00:00Z",
+        "2026-11-17T16:00:00Z",
+        "2026-11-24T16:00:00Z",
+        "2026-12-01T16:00:00Z",
+        "2026-12-08T16:00:00Z",
+        "2026-12-15T16:00:00Z"
+      ],
+      "summary_es": "Serie especial de 6 sesiones semanales en directo conducida por Lucas Soares (autor del libro Early Release \"Agent Skills\") y Louis-Francois Bouchard sobre cómo empaquetar conocimiento procedimental reutilizable (SKILL.md, scripts y herramientas MCP) para agentes autónomos.",
+      "summary_en": "Six-part live series by Lucas Soares and Louis-Francois Bouchard on authoring modular, reusable procedural skills for autonomous AI agents.",
+      "toc": [
+        "Episodio 1 (10 Nov): Anatomía de una Skill agéntica y descubrimiento perezoso (Lazy Loading)",
+        "Episodio 2 (17 Nov): Composición de Skills con servidores MCP locales y remotos",
+        "Episodio 3 (24 Nov): Evaluación y benchmarking de Skills en tareas de código",
+        "Episodio 4 (1 Dic): Memoria procedimental y auto-mejora de habilidades"
+      ],
+      "glossary": [
+        {
+          "term": "Procedural Skill (Habilidad Procedimental)",
+          "category": "Arquitectura de Agentes",
+          "definition": "Paquete autocontenido de instrucciones (SKILL.md), esquemas y scripts auxiliares que un agente carga bajo demanda solo cuando la tarea coincide con su dominio."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572184049",
+      "title": "Agentic Coding with Claude Code",
+      "title_es": "Programación Agéntica Avanzada con Claude Code",
+      "authors": [
+        "Ken Kousen"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "live course",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "structured-learning",
+        "agentic-coding",
+        "claude"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572184049/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572184049/",
+      "publication_date": "2026-10-15",
+      "live_event_start_dates": [
+        "2026-11-11T13:00:00Z",
+        "2026-12-09T13:00:00Z"
+      ],
+      "summary_es": "Taller práctico en directo con Ken Kousen sobre flujos de trabajo de desarrollo guiados por agentes en terminal, configuración de reglas de proyecto, ejecución en sandboxes seguros y delegación a subagentes.",
+      "summary_en": "Live hands-on workshop with Ken Kousen on terminal-native agentic coding workflows, project rules, sandboxing, and subagent delegation.",
+      "toc": [
+        "1. Configuración de memoria de proyecto y directrices arquitectónicas",
+        "2. Desarrollo guiado por pruebas (TDD) en bucle cerrado con agentes",
+        "3. Integración con herramientas MCP y control de versiones en Git",
+        "4. Refactorización segura de repositorios multipaquete"
+      ],
+      "glossary": [
+        {
+          "term": "Closed-Loop Agentic TDD",
+          "category": "Ingeniería Agéntica",
+          "definition": "Patrón donde el agente ejecuta la suite de tests tras cada edición y utiliza las trazas de fallo para converger autónomamente hacia la solución."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572012981",
+      "title": "Cursor for Software Engineers",
+      "title_es": "Cursor para Ingenieros de Software: Arquitecturas y Flujos Profesionales",
+      "authors": [
+        "Sergio Pereira"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "live course",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "structured-learning",
+        "ide",
+        "agentic-coding"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572012981/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572012981/",
+      "publication_date": "2026-09-25",
+      "live_event_start_dates": [
+        "2026-11-24T15:00:00Z"
+      ],
+      "summary_es": "Curso en vivo de Sergio Pereira enfocado en maximizar la productividad en ingeniería de software mediante indexación semántica del repositorio, reglas de contexto y servidores MCP integrados en el IDE.",
+      "summary_en": "Live training by Sergio Pereira on semantic codebase indexing, context rules, and MCP integrations in modern AI IDEs.",
+      "toc": [
+        "1. Indexación del grafo de código y selección óptima de contexto",
+        "2. Reglas por dominio y prevención de regresiones arquitectónicas",
+        "3. Conexión de servidores MCP de bases de datos y documentación interna"
+      ],
+      "glossary": [
+        {
+          "term": "Context Pruning (Poda de Contexto)",
+          "category": "Optimización LLM",
+          "definition": "Selección quirúrgica de fragmentos de código y firmas de tipos relevantes para evitar la degradación de atención en ventanas de contexto extensas."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572451028",
+      "title": "Expert Showcase: Architecture Meets Harness Engineering",
+      "title_es": "Expert Showcase: Cuando la Arquitectura de Software se une al Harness Engineering",
+      "authors": [
+        "Neal Ford",
+        "Matthew Skelton",
+        "Barry O’Reilly",
+        "Eoin Woods",
+        "Mark Richards",
+        "Sonya Natanzon"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "conference",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "software-arch",
+      "tags": [
+        "conference",
+        "showcase",
+        "architecture",
+        "harness-engineering"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572451028/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572451028/",
+      "publication_date": "2026-08-19",
+      "live_event_start_dates": [
+        "2026-12-10T16:00:00Z"
+      ],
+      "summary_es": "Una de las grandes conferencias virtuales del año en O’Reilly: Neal Ford, Mark Richards, Matthew Skelton (autor de Team Topologies) y Barry O’Reilly abordan cómo diseñar los arneses arquitectónicos (harnesses), funciones de aptitud (fitness functions) y topologías de equipos para sistemas gobernados por agentes.",
+      "summary_en": "Flagship virtual conference featuring Neal Ford, Mark Richards, Matthew Skelton, and Barry O’Reilly on architectural harnesses and fitness functions for agentic systems.",
+      "toc": [
+        "Keynote: De la Arquitectura Evolutiva al Harness Engineering (Neal Ford)",
+        "Sesión 2: Fitness Functions automatizadas para contener la deriva de agentes (Mark Richards)",
+        "Sesión 3: Team Topologies en la era de los equipos híbridos humano-agente (Matthew Skelton)",
+        "Sesión 4: Antifragilidad y sistemas complejos adaptativos (Barry O’Reilly)"
+      ],
+      "glossary": [
+        {
+          "term": "Architectural Fitness Function",
+          "category": "Arquitectura Evolutiva",
+          "definition": "Mecanismo objetivo y automatizado que evalúa cuán cerca está una arquitectura de cumplir sus requisitos no funcionales (latencia, acoplamiento, seguridad) en cada cambio."
+        },
+        {
+          "term": "Agentic Drift (Deriva Agéntica)",
+          "category": "Sistemas IA",
+          "definition": "Desviación progresiva respecto a los patrones arquitectónicos del proyecto cuando múltiples agentes modifican el código sin restricciones estructurales."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0636920098728",
+      "title": "Designing Microservices",
+      "title_es": "Diseño de Microservicios Modernos y Límites de Dominio",
+      "authors": [
+        "Neal Ford"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "live course",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "software-arch",
+      "tags": [
+        "structured-learning",
+        "microservices",
+        "architecture"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0636920098728/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0636920098728/",
+      "publication_date": "2026-08-20",
+      "live_event_start_dates": [
+        "2026-11-02T13:00:00Z"
+      ],
+      "summary_es": "Curso clásico actualizado a 2026 por Neal Ford sobre particionamiento de dominios, granularidad de servicios, transacciones distribuidas (Sagas) y cuándo elegir un monolito modular frente a microservicios.",
+      "summary_en": "Live course by Neal Ford on domain partitioning, service granularity, sagas, and modular monoliths vs microservices.",
+      "toc": [
+        "1. Desintegradores y conductores de granularidad arquitectónica",
+        "2. Patrones de comunicación síncrona y asíncrona sin acoplamiento",
+        "3. Transacciones distribuidas: Coreografía vs Orquestación en Sagas"
+      ],
+      "glossary": [
+        {
+          "term": "Granularity Disintegrators",
+          "category": "Arquitectura",
+          "definition": "Criterios técnicos (escalabilidad independiente, tolerancia a fallos, volatilidad del código) que justifican dividir un componente en servicios separados."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572420406",
+      "title": "What’s Happening in Data",
+      "title_es": "What’s Happening in Data: Coloquio Quincenal sobre Arquitecturas de Datos",
+      "authors": [
+        "Jordan Morrow",
+        "Patrick McFadin",
+        "Matt Housley"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "special event",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "data-rag",
+      "tags": [
+        "special-event",
+        "data-engineering",
+        "lakehouse"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572420406/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572420406/",
+      "publication_date": "2026-07-09",
+      "live_event_start_dates": [
+        "2026-11-10T15:00:00Z",
+        "2026-11-24T15:00:00Z"
+      ],
+      "summary_es": "Coloquio interactivo en directo con Jordan Morrow, Patrick McFadin y Matt Housley (coautor de Fundamentals of Data Engineering) analizando las novedades quincenales en Apache Iceberg, motores vectoriales, RAG empresarial y soberanía de datos.",
+      "summary_en": "Bi-weekly live discussion with Jordan Morrow, Patrick McFadin, and Matt Housley covering Apache Iceberg, vector engines, and enterprise data architecture.",
+      "toc": [
+        "1. Estado del arte en formatos de tablas abiertas (Apache Iceberg v3 / Delta)",
+        "2. Arquitecturas de datos en tiempo real para alimentar memoria de agentes",
+        "3. Debate en vivo sobre casos reales y antipatrones de costes en la nube"
+      ],
+      "glossary": [
+        {
+          "term": "Open Table Formats (Iceberg)",
+          "category": "Ingeniería de Datos",
+          "definition": "Capa de metadatos transaccionales ACID sobre almacenamiento de objetos que permite que múltiples motores de cómputo consulten las mismas tablas sin bloqueo de proveedor."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572229962",
+      "title": "AI Context Engineering",
+      "title_es": "Ingeniería de Contexto para Sistemas de IA (AI Context Engineering)",
+      "authors": [
+        "Skanda Vivek"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "live course",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "structured-learning",
+        "context-engineering",
+        "rag"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572229962/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572229962/",
+      "publication_date": "2026-10-23",
+      "live_event_start_dates": [
+        "2026-12-14T13:00:00Z"
+      ],
+      "summary_es": "Curso recién anunciado sobre Context Engineering: cómo estructurar, comprimir, indexar y enrutar el contexto dinámico (memorias, resultados de herramientas MCP y grafos de conocimiento) antes de cada llamada de inferencia.",
+      "summary_en": "Newly announced live course on structuring, compressing, and routing dynamic context for LLM and agent inference.",
+      "toc": [
+        "1. Más allá del Prompt Engineering: Arquitectura del Context Window",
+        "2. Recuperación híbrida (BM25 + Vectorial + Grafo) y reranking",
+        "3. Compresión de historial y gestión de estado en agentes de horizonte largo"
+      ],
+      "glossary": [
+        {
+          "term": "Context Engineering",
+          "category": "Ingeniería IA",
+          "definition": "Disciplina de sistemas encargada de ensamblar dinámicamente la información exacta, herramientas y estado que necesita un modelo en cada paso de ejecución."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572488871",
+      "title": "Expert Showcase: Agentic Engineering",
+      "title_es": "Expert Showcase: Ingeniería Agéntica en Producción",
+      "authors": [
+        "Ben O'Mahony"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "conference",
+      "channel_bucket": "live-upcoming",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "conference",
+        "showcase",
+        "agentic-engineering"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572488871/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572488871/",
+      "publication_date": "2026-10-28",
+      "live_event_start_dates": [
+        "2027-01-19T16:00:00Z"
+      ],
+      "summary_es": "Anunciado el 28 de octubre de 2026: conferencia virtual dirigida por Ben O’Mahony (autor de Building AI Agent Platforms) sobre la ingeniería de plataformas multi-agente a escala empresarial.",
+      "summary_en": "Just announced virtual conference led by Ben O’Mahony on building enterprise-scale multi-agent engineering platforms.",
+      "toc": [
+        "1. Planos de control y planos de datos en plataformas de agentes",
+        "2. Sandboxing de ejecución de código y aislamiento de credenciales",
+        "3. Observabilidad, trazas distribuidas y control de presupuestos de inferencia"
+      ],
+      "glossary": [
+        {
+          "term": "Agent Control Plane",
+          "category": "Plataformas IA",
+          "definition": "Capa de infraestructura que gobierna la identidad, políticas de acceso, cuotas y auditoría de todos los agentes desplegados en una organización."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572428136",
+      "title": "Expert Showcase: Agent Memory",
+      "title_es": "Expert Showcase: Arquitectura de Memoria para Agentes de IA",
+      "authors": [
+        "Ksenia Se",
+        "Lewis Liu",
+        "Sally Ann O’Malley",
+        "Jason Davenport",
+        "Jess Weng",
+        "Xavier Bull",
+        "Shawn Shen",
+        "Kris Murphy",
+        "Pete Johnson"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "conference",
+      "channel_bucket": "replays",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "conference",
+        "agent-memory",
+        "replay"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/0642572428136/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572428136/",
+      "publication_date": "2026-10-13",
+      "duration_sec": 11499,
+      "summary_es": "Grabación completa (3h 11m) del Expert Showcase coordinado por Ksenia Se el 13 de octubre de 2026. Examina en profundidad cómo dotar a los agentes de memoria a corto y largo plazo: memoria episódica, semántica y procedimental, consolidación de recuerdos y prevención de contaminación del estado.",
+      "summary_en": "Full recording (3h 11m) of the October 2026 Expert Showcase chaired by Ksenia Se on episodic, semantic, and procedural memory architectures for AI agents.",
+      "toc": [
+        "00:00 — Taxonomía de la Memoria Agéntica: Corto plazo, Episódica, Semántica y Procedimental (Ksenia Se)",
+        "00:35 — Grafos de conocimiento temporales para memoria empresarial persistente (Lewis Liu)",
+        "01:12 — Consolidación y olvido selectivo: Evitando el envenenamiento de memoria (Pete Johnson)",
+        "01:50 — Arquitecturas de baja latencia con motores vectoriales e índices híbridos (Shawn Shen)",
+        "02:30 — Panel de debate: Evaluación de sistemas con memoria a largo plazo"
+      ],
+      "glossary": [
+        {
+          "term": "Memoria Episódica Agéntica",
+          "category": "Cognición IA",
+          "definition": "Registro cronológico de interacciones, decisiones pasadas y resultados de ejecuciones previas que permite al agente aprender de experiencias específicas."
+        },
+        {
+          "term": "Memory Consolidation (Consolidación)",
+          "category": "Arquitectura de Memoria",
+          "definition": "Proceso asíncrono en segundo plano que resume trazas crudas de conversación en hechos semánticos estructurados y descarta ruido redundante."
+        },
+        {
+          "term": "Memory Poisoning (Envenenamiento)",
+          "category": "Seguridad IA",
+          "definition": "Vector de ataque o degradación en el que una alucinación o dato malicioso se persiste en la memoria a largo plazo, corrompiendo futuras sesiones."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572401825",
+      "title": "AI Superstream: Securing Agentic Systems",
+      "title_es": "AI Superstream: Seguridad en Sistemas Agénticos",
+      "authors": [
+        "Andreas Welsch",
+        "Vicki Reyzelman",
+        "Sandhya Subramani",
+        "Sagar Rao",
+        "Udita Patel",
+        "Frank Geisler",
+        "David Campbell"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "conference",
+      "channel_bucket": "replays",
+      "topic_slug": "security-gov",
+      "tags": [
+        "conference",
+        "superstream",
+        "security",
+        "agents"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/0642572401825/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572401825/",
+      "publication_date": "2026-10-07",
+      "duration_sec": 12560,
+      "summary_es": "Grabación íntegra (3h 29m) de la conferencia AI Superstream celebrada en octubre de 2026 sobre defensa en profundidad para agentes autónomos: control de privilegios mínimos en herramientas MCP, aislamiento de identidad no humana (NHI) y cortafuegos semánticos.",
+      "summary_en": "Complete 3.5-hour recording of the October 2026 AI Superstream covering defense-in-depth for autonomous agents, least-privilege MCP tool execution, and non-human identity governance.",
+      "toc": [
+        "00:00 — Apertura: El nuevo perímetro de amenaza en los agentes con acceso a herramientas (Andreas Welsch)",
+        "00:32 — Gestión de Identidades No Humanas (NHI) y delegación OAuth en flujos multi-agente (David Campbell)",
+        "01:10 — Prevención de Inyección Indirecta de Prompts y exfiltración de datos (Vicki Reyzelman)",
+        "01:55 — Sandboxing de ejecución de código y auditoría criptográfica de acciones (Frank Geisler)",
+        "02:40 — Gobernanza en producción y respuesta a incidentes agénticos (Sandhya Subramani)"
+      ],
+      "glossary": [
+        {
+          "term": "Non-Human Identity (NHI)",
+          "category": "Ciberseguridad",
+          "definition": "Credenciales dinámicas de corta duración asignadas específicamente a un agente o subagente con permisos acotados a su tarea actual."
+        },
+        {
+          "term": "Confused Deputy Problem en IA",
+          "category": "Seguridad de Sistemas",
+          "definition": "Vulnerabilidad clásica donde un atacante engaña a un agente con privilegios elevados para que ejecute una herramienta legítima con parámetros maliciosos."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572401023",
+      "title": "Software Architecture Superstream: Building Architectures for Agents (and Humans)",
+      "title_es": "Software Architecture Superstream: Arquitecturas para Agentes (y Humanos)",
+      "authors": [
+        "Neal Ford",
+        "Mallika Rao",
+        "Parminder Singh",
+        "Jason Davenport",
+        "Jonathan Johnson",
+        "Sandhya Subramani",
+        "Theo Valmis"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "conference",
+      "channel_bucket": "replays",
+      "topic_slug": "software-arch",
+      "tags": [
+        "conference",
+        "superstream",
+        "architecture"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/0642572401023/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572401023/",
+      "publication_date": "2026-09-29",
+      "duration_sec": 12123,
+      "summary_es": "Conferencia Superstream dirigida por Neal Ford (3h 22m, finales de septiembre de 2026) que redefine cómo diseñar APIs, eventos y esquemas de datos cuando los consumidores del sistema son tanto usuarios humanos como agentes autónomos.",
+      "summary_en": "Software Architecture Superstream hosted by Neal Ford exploring how to design APIs, event streams, and data schemas consumed by both humans and autonomous agents.",
+      "toc": [
+        "00:00 — Principios de diseño para sistemas de doble audiencia: Humanos y Agentes (Neal Ford)",
+        "00:40 — De APIs REST a contratos semánticos autodescriptivos y servidores MCP (Jonathan Johnson)",
+        "01:25 — Arquitecturas orientadas a eventos (EDA) como columna vertebral de coordinación agéntica (Mallika Rao)",
+        "02:15 — Gestión de fallos parciales, idempotencia y compensación en acciones autónomas (Theo Valmis)"
+      ],
+      "glossary": [
+        {
+          "term": "Dual-Audience Architecture",
+          "category": "Arquitectura de Software",
+          "definition": "Patrón de diseño que expone simultáneamente interfaces visuales ergonómicas para humanos y contratos estructurados ricos en metadatos (como MCP) para agentes."
+        },
+        {
+          "term": "Idempotencia Agéntica",
+          "category": "Sistemas Distribuidos",
+          "definition": "Garantía de que si un agente reintenta una llamada a herramienta por timeout o incertidumbre, el efecto lateral en el sistema se aplica una única vez."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572452186",
+      "title": "We Need Better Output, Not Just More: Claudine Gartenberg Live with Tim O’Reilly",
+      "title_es": "Necesitamos mejor calidad, no solo más volumen: Claudine Gartenberg en vivo con Tim O’Reilly",
+      "authors": [
+        "Tim O'Reilly",
+        "Claudine Gartenberg"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "interview",
+      "channel_bucket": "replays",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "interview",
+        "tim-oreilly",
+        "productivity"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/0642572452186/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572452186/",
+      "publication_date": "2026-09-28",
+      "duration_sec": 3372,
+      "summary_es": "Conversación a fondo (56 min) entre Tim O’Reilly y la investigadora de Wharton Claudine Gartenberg sobre la paradoja de la productividad en la era de la IA generativa: por qué inundar los repositorios y empresas de código o texto sintético degrada el criterio si no se acompaña de arquitectura y verificación.",
+      "summary_en": "In-depth conversation between Tim O’Reilly and Wharton professor Claudine Gartenberg on the AI productivity paradox and elevating engineering quality over raw output volume.",
+      "toc": [
+        "00:00 — La falacia de medir la productividad por líneas de código o artefactos generados",
+        "00:18 — El fenómeno del \"Slop\" organizativo y el coste de revisión para los ingenieros sénior",
+        "00:36 — Cómo usar agentes para amplificar la exploración profunda y la verificación rigurosa"
+      ],
+      "glossary": [
+        {
+          "term": "Verification Bottleneck (Cuello de Botella de Verificación)",
+          "category": "Ingeniería de Software",
+          "definition": "Desplazamiento del esfuerzo cognitivo desde la escritura inicial del código hacia la auditoría, comprensión y validación de lo generado por agentes."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572416713",
+      "title": "AI Codecon: Building with Open Source AI",
+      "title_es": "AI Codecon: Construyendo con Inteligencia Artificial Open Source",
+      "authors": [
+        "Addy Osmani",
+        "Tim O'Reilly",
+        "Angie Jones",
+        "Sunny Israni",
+        "Drew Breunig",
+        "Mike Linksvayer",
+        "Gene Kim",
+        "Raffi Krikorian",
+        "Gabe Goodhart"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "conference",
+      "channel_bucket": "replays",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "conference",
+        "codecon",
+        "open-source-ai",
+        "local-ai"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/0642572416713/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572416713/",
+      "publication_date": "2026-08-31",
+      "duration_sec": 13250,
+      "summary_es": "Grabación completa (3h 40m) de AI Codecon 2026 con Addy Osmani, Tim O’Reilly, Gene Kim, Angie Jones y Drew Breunig. Un recorrido magistral por la ejecución de modelos locales (Gemma, Llama, Qwen), herramientas de código abierto, protocolos abiertos como MCP y estrategias de ingeniería Local-First.",
+      "summary_en": "Full 3h 40m recording of AI Codecon 2026 featuring Addy Osmani, Tim O’Reilly, Gene Kim, and Angie Jones on open-source AI models, local inference, and open protocols.",
+      "toc": [
+        "00:00 — Apertura: El imperativo del Open Source en la pila de IA (Tim O’Reilly & Addy Osmani)",
+        "00:42 — Arquitecturas Local-First con modelos compactos de alto rendimiento (Drew Breunig)",
+        "01:28 — Lecciones de resiliencia y disciplina DevOps en desarrollo agéntico (Gene Kim)",
+        "02:15 — Estándares abiertos de interoperabilidad: MCP y agentes multimodales (Angie Jones & Gabe Goodhart)"
+      ],
+      "glossary": [
+        {
+          "term": "Local-First AI Architecture",
+          "category": "Arquitectura de Sistemas",
+          "definition": "Diseño de aplicaciones donde la base de datos (SQLite), el cómputo acelerado (WebGPU) y la inferencia neuronal (Ollama/Gemma) residen en la máquina del usuario sin latencia ni coste por token."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572416744",
+      "title": "The Days When Fable Got Hit by a Bus and Disappeared: Gene Kim Live with Tim O’Reilly",
+      "title_es": "El día en que el autobús atropelló a Fable: Gene Kim en vivo con Tim O’Reilly",
+      "authors": [
+        "Tim O'Reilly",
+        "Gene Kim"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "interview",
+      "channel_bucket": "replays",
+      "topic_slug": "software-arch",
+      "tags": [
+        "interview",
+        "tim-oreilly",
+        "gene-kim",
+        "devops",
+        "resilience"
+      ],
+      "url": "https://learning.oreilly.com/videos/the-days-when/0642572416744/0642572416744-video408329/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572416744/",
+      "publication_date": "2026-07-28",
+      "duration_sec": 3600,
+      "summary_es": "Sesión histórica de Live with Tim O’Reilly junto a Gene Kim (autor de The Phoenix Project y Wiring the Winning Organization). Kim relata cómo su infraestructura personal de 50 repositorios colapsó cuando su agente autónomo principal (\"Fable 5\") fue suspendido súbitamente, extrayendo lecciones vitales sobre el Bus Factor de los modelos de IA y la recuperación mediante Git y texto plano.",
+      "summary_en": "Gene Kim joins Tim O’Reilly to analyze the sudden loss of his autonomous agent \"Fable 5\" across 50 repositories and the DevOps resilience principles needed for agentic systems.",
+      "toc": [
+        "00:00 — Anatomía del sistema de gestión de conocimiento de Gene Kim (50 repositorios)",
+        "00:15 — El incidente: Revocación anticipada del modelo y fallo en cascada del fallback",
+        "00:34 — Por qué Git y los artefactos en Markdown plano salvaron la infraestructura",
+        "00:48 — Principios de desacoplamiento y simulacros de conmutación entre modelos"
+      ],
+      "glossary": [
+        {
+          "term": "Acoplamiento Implícito de Modelo",
+          "category": "Riesgo Arquitectónico",
+          "definition": "Dependencia silenciosa respecto a las capacidades de inferencia y estilo de razonamiento de un modelo concreto que rompe los pipelines al cambiar de proveedor."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572455958",
+      "title": "The Monday Morning Agent",
+      "title_es": "The Monday Morning Agent: De la Idea al Agente en Producción",
+      "authors": [
+        "Chester Ismay"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "instructional",
+      "channel_bucket": "replays",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "instructional",
+        "agents",
+        "python"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/0642572455958/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572455958/",
+      "publication_date": "2026-10-12",
+      "duration_sec": 4396,
+      "summary_es": "Sesión práctica grabada el 12 de octubre de 2026 (1h 13m) con Chester Ismay que muestra paso a paso cómo diseñar, instrumentar y evaluar un agente funcional listo para operar el lunes por la mañana.",
+      "summary_en": "Practical 73-minute recorded session by Chester Ismay walking through designing, instrumenting, and evaluating a production-ready agent.",
+      "toc": [
+        "1. Definición del alcance y herramientas mínimas viables del agente",
+        "2. Instrumentación de trazas y aserciones de salida",
+        "3. Despliegue iterativo con conjunto dorado de pruebas (Golden Dataset)"
+      ],
+      "glossary": [
+        {
+          "term": "Golden Dataset de Evaluación",
+          "category": "Calidad IA",
+          "definition": "Colección curada de casos de entrada reales y salidas esperadas verificadas por expertos que sirve como batería de regresión ante cambios de prompt o modelo."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572443313",
+      "title": "Lunch & Learn: Claude Edition",
+      "title_es": "Lunch & Learn: Edición Claude y Flujos de Trabajo Agénticos",
+      "authors": [
+        "Kesha Williams"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "instructional",
+      "channel_bucket": "replays",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "instructional",
+        "claude",
+        "lunch-and-learn"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/0642572443313/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572443313/",
+      "publication_date": "2026-10-08",
+      "duration_sec": 30976,
+      "summary_es": "Colección completa del programa Lunch & Learn impartido por Kesha Williams en octubre de 2026 sobre arquitectura de agentes, uso avanzado de artefactos, servidores MCP y gobernanza práctica.",
+      "summary_en": "Comprehensive Lunch & Learn series by Kesha Williams covering agent architectures, artifacts, MCP integrations, and governance.",
+      "toc": [
+        "1. Patrones de razonamiento extendido y uso de herramientas en paralelo",
+        "2. Conectando repositorios locales y bases de datos mediante MCP",
+        "3. Seguridad, privacidad y gobernanza de agentes en equipos técnicos"
+      ],
+      "glossary": [
+        {
+          "term": "Parallel Tool Calling",
+          "category": "Ejecución Agéntica",
+          "definition": "Capacidad de un agente para emitir múltiples invocaciones de herramientas independientes en un solo turno de inferencia, reduciendo la latencia total."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:0642572455491",
+      "title": "Generative AI in the Real World: Local Voice AI with Pete Warden",
+      "title_es": "IA Generativa en el Mundo Real: Voz e Inferencia Local con Pete Warden",
+      "authors": [
+        "Ben Lorica",
+        "Pete Warden",
+        "Mike Loukides"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "video",
+      "marketing_type": "interview",
+      "channel_bucket": "replays",
+      "topic_slug": "webgpu-cpp-rust",
+      "tags": [
+        "interview",
+        "edge-ai",
+        "voice-ai",
+        "local-ai"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/0642572455491/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572455491/",
+      "publication_date": "2026-09-10",
+      "duration_sec": 2863,
+      "summary_es": "Episodio en vídeo (47 min) con Ben Lorica, Mike Loukides y Pete Warden (pionero de TinyML) sobre la ejecución de modelos de voz y audio de baja latencia directamente en hardware local sin depender de la nube.",
+      "summary_en": "Video discussion with Ben Lorica, Mike Loukides, and Pete Warden on running low-latency voice and audio AI models locally on edge hardware.",
+      "toc": [
+        "1. Por qué la latencia de red rompe la naturalidad en interfaces de voz",
+        "2. Cuantización en C++/Rust y aceleración en GPU/NPU local",
+        "3. Privacidad por diseño en asistentes residentes"
+      ],
+      "glossary": [
+        {
+          "term": "Sub-200ms Voice Turnaround",
+          "category": "Sistemas en Tiempo Real",
+          "definition": "Umbral psicofísico de latencia por debajo del cual una conversación hablada con un modelo local se percibe como instantánea y natural."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572327590",
+      "title": "Agent Skills",
+      "title_es": "Agent Skills: Arquitectura de Habilidades para Agentes de IA (Early Release)",
+      "authors": [
+        "Lucas Soares"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "early-release",
+      "channel_bucket": "early-releases",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "early-release",
+        "agent-skills",
+        "mcp"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572327590/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572327590/",
+      "publication_date": "2026-12-25",
+      "page_count": 124,
+      "is_early_release": 1,
+      "summary_es": "Libro en acceso anticipado (Early Release) de Lucas Soares que sistematiza el nuevo paradigma de diseño de agentes en 2026: en lugar de crear agentes monolíticos para cada problema, dotar a un agente generalista de un catálogo modular de \"Skills\" y servidores MCP cargados dinámicamente.",
+      "summary_en": "Early Release book by Lucas Soares on designing modular, dynamically loaded procedural skills and MCP toolsets for generalist AI agents.",
+      "toc": [
+        "Capítulo 1: Por qué las Skills modulares reemplazan a los enjambres de agentes rígidos",
+        "Capítulo 2: Estructura del manifiesto SKILL.md, frontmatter y activación semántica",
+        "Capítulo 3: Integración de scripts deterministas y servidores MCP en una Skill",
+        "Capítulo 4: Composición, versionado en Git y pruebas automatizadas de Skills"
+      ],
+      "glossary": [
+        {
+          "term": "Progressive Skill Disclosure",
+          "category": "Ingeniería de Contexto",
+          "definition": "Técnica donde el agente solo mantiene en su prompt inicial el nombre y descripción de cada Skill, leyendo el cuerpo completo de instrucciones únicamente cuando se activa."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572260507",
+      "title": "RAG-Ready Patterns for Data Platforms",
+      "title_es": "Patrones Listos para RAG en Plataformas de Datos (Early Release)",
+      "authors": [
+        "Ravi Vedula",
+        "Gerardo Bodegas Martinez",
+        "Maruti Chittajallu",
+        "Jack Pullikottil"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "early-release",
+      "channel_bucket": "early-releases",
+      "topic_slug": "data-rag",
+      "tags": [
+        "early-release",
+        "rag",
+        "data-platforms"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572260507/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572260507/",
+      "publication_date": "2026-11-16",
+      "page_count": 342,
+      "is_early_release": 1,
+      "summary_es": "Early Release de O’Reilly que aborda el diseño de pipelines de datos empresariales preparados de forma nativa para RAG y memoria agéntica: ingesta incremental CDC, particionado semántico (chunking estructural), índices híbridos y control de acceso por fila (RBAC) en búsquedas vectoriales.",
+      "summary_en": "Early Release guide on architecting enterprise data platforms natively prepared for RAG and agent memory with incremental CDC and ACL-aware vector search.",
+      "toc": [
+        "Capítulo 1: De los Data Lakes pasivos a las plataformas de contexto activo",
+        "Capítulo 2: Ingesta incremental mediante Change Data Capture (CDC) hacia índices híbridos",
+        "Capítulo 3: Propagación de permisos y seguridad documental (ACL-Aware Retrieval)",
+        "Capítulo 4: Evaluación de frescura, fidelidad y relevancia de recuperación"
+      ],
+      "glossary": [
+        {
+          "term": "ACL-Aware Retrieval",
+          "category": "Seguridad de Datos",
+          "definition": "Filtrado de permisos en tiempo de consulta dentro del motor de búsqueda para garantizar que un agente solo recupere fragmentos que el usuario invocador tiene permiso para ver."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572354664",
+      "title": "Architecting Data Systems for AI Agents",
+      "title_es": "Arquitectura de Sistemas de Datos para Agentes de IA (Early Release)",
+      "authors": [
+        "Firat Tekiner"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "early-release",
+      "channel_bucket": "early-releases",
+      "topic_slug": "data-rag",
+      "tags": [
+        "early-release",
+        "data-systems",
+        "ai-agents"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572354664/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572354664/",
+      "publication_date": "2027-06-25",
+      "page_count": 300,
+      "is_early_release": 1,
+      "summary_es": "Lanzamiento anticipado de Firat Tekiner sobre cómo cambian los motores de bases de datos cuando los agentes generan miles de consultas exploratorias, ramificaciones de estado (database branching) y transacciones especulativas por minuto.",
+      "summary_en": "Early Release by Firat Tekiner on designing data systems for high-frequency exploratory queries, database branching, and speculative agent transactions.",
+      "toc": [
+        "Capítulo 1: El patrón de tráfico de los agentes frente al OLTP/OLAP tradicional",
+        "Capítulo 2: Copy-on-Write Database Branching para sandboxes agénticos",
+        "Capítulo 3: Servidores MCP sobre almacenes relacionales y analíticos"
+      ],
+      "glossary": [
+        {
+          "term": "Copy-on-Write DB Branching",
+          "category": "Bases de Datos",
+          "definition": "Clonación instantánea y sin copia física de una base de datos que permite a un agente probar migraciones o consultas destructivas en una rama aislada."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572243906",
+      "title": "Building AI Agent Platforms",
+      "title_es": "Construcción de Plataformas de Agentes de IA (Early Release)",
+      "authors": [
+        "Ben O'Mahony",
+        "Fabian Nonnenmacher"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "early-release",
+      "channel_bucket": "early-releases",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "early-release",
+        "agent-platforms",
+        "architecture"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572243906/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572243906/",
+      "publication_date": "2027-08-25",
+      "page_count": 500,
+      "is_early_release": 1,
+      "summary_es": "Obra de referencia en Early Release (500 págs.) de Ben O’Mahony y Fabian Nonnenmacher sobre cómo construir la plataforma interna de agentes de una organización: registro de herramientas MCP, pasarela de modelos (LLM Gateway), ejecución duradera y observabilidad.",
+      "summary_en": "Comprehensive Early Release book on designing internal AI agent platforms, MCP registries, model gateways, and durable execution engines.",
+      "toc": [
+        "Capítulo 1: Anatomía de una Plataforma de Agentes Empresarial",
+        "Capítulo 2: El Registro Interno de Servidores MCP y Descubrimiento de Herramientas",
+        "Capítulo 3: Ejecución Duradera (Durable Execution) y recuperación ante fallos de larga duración",
+        "Capítulo 4: Enrutamiento multi-modelo y resiliencia ante caídas de proveedores"
+      ],
+      "glossary": [
+        {
+          "term": "Durable Agent Execution",
+          "category": "Sistemas Distribuidos",
+          "definition": "Persistencia automática de cada paso de razonamiento y llamada a herramienta en un registro de eventos para que un agente pueda reanudar su trabajo tras un reinicio sin repetir efectos secundarios."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572412401",
+      "title": "Data and AI Sovereignty",
+      "title_es": "Soberanía de Datos e Inteligencia Artificial (Informe Ejecutivo)",
+      "authors": [
+        "Emma McGrattan",
+        "Steffen Kläbe",
+        "Ole Olesen-Bagneux"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "report",
+      "channel_bucket": "early-releases",
+      "topic_slug": "security-gov",
+      "tags": [
+        "report",
+        "sovereignty",
+        "governance",
+        "data"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572412401/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572412401/",
+      "publication_date": "2026-10-25",
+      "page_count": 46,
+      "is_report": 1,
+      "summary_es": "Informe ejecutivo de 46 páginas publicado el 25 de octubre de 2026 sobre arquitectura de soberanía digital y de IA: cómo diseñar infraestructuras híbridas y locales que cumplan con las normativas europeas e internacionales sin renunciar a capacidades agénticas avanzadas.",
+      "summary_en": "46-page O’Reilly Executive Report published October 25, 2026 on designing sovereign data and AI architectures across hybrid and local infrastructure.",
+      "toc": [
+        "1. Las tres dimensiones de la soberanía: Datos, Cómputo y Pesos de Modelos",
+        "2. Arquitecturas desacopladas y catálogos de datos federados",
+        "3. Inferencia local y privada frente a nubes hiperscalares"
+      ],
+      "glossary": [
+        {
+          "term": "Federated Data Catalog",
+          "category": "Gobernanza de Datos",
+          "definition": "Catálogo de metadatos distribuido que permite descubrir y auditar activos de datos entre distintas jurisdicciones sin centralizar los datos brutos."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572392468",
+      "title": "AI Inference at Scale",
+      "title_es": "Inferencia de IA a Escala: Optimización de Latencia y Rendimiento",
+      "authors": [
+        "Christopher Nuland",
+        "Michael Goin",
+        "Carlos Costa"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "report",
+      "channel_bucket": "early-releases",
+      "topic_slug": "webgpu-cpp-rust",
+      "tags": [
+        "inference",
+        "gpu",
+        "performance",
+        "vllm"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572392468/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572392468/",
+      "publication_date": "2026-10-01",
+      "page_count": 80,
+      "is_report": 1,
+      "summary_es": "Libro técnico conciso (80 págs., octubre de 2026) sobre optimización de motores de inferencia en GPU: PagedAttention, KV-Cache distribuida, decodificación especulativa, cuantización FP8/INT4 y planificación continua de lotes (continuous batching).",
+      "summary_en": "Concise 80-page O’Reilly guide published October 2026 on GPU inference optimization, PagedAttention, distributed KV-cache, and speculative decoding.",
+      "toc": [
+        "1. Anatomía del cuello de botella de ancho de banda de memoria en el bucle de decodificación",
+        "2. Gestión de KV-Cache con PagedAttention y Prefix Caching",
+        "3. Decodificación especulativa y cuantización sin pérdida de precisión"
+      ],
+      "glossary": [
+        {
+          "term": "Prefix Caching (Caché de Prefijos)",
+          "category": "Inferencia GPU",
+          "definition": "Reutilización en memoria VRAM de los tensores Key-Value ya calculados para el prompt del sistema y las definiciones de herramientas MCP entre múltiples turnos."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:0642572221119",
+      "title": "Software Architecture Patterns, Antipatterns, and Pitfalls",
+      "title_es": "Patrones, Antipatrones y Trampas en la Arquitectura de Software",
+      "authors": [
+        "Mark Richards",
+        "Neal Ford",
+        "Raju Gandhi"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "book",
+      "channel_bucket": "early-releases",
+      "topic_slug": "software-arch",
+      "tags": [
+        "architecture",
+        "patterns",
+        "antipatterns"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/0642572221119/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572221119/",
+      "publication_date": "2026-10-27",
+      "page_count": 552,
+      "summary_es": "Recién publicado el 27 de octubre de 2026 (552 págs.): la nueva obra conjunta de Mark Richards, Neal Ford y Raju Gandhi que analiza los errores reales de diseño en sistemas distribuidos, microservicios y arquitecturas orientadas a eventos, junto con matrices de trade-offs.",
+      "summary_en": "Brand-new release (Oct 27, 2026, 552 pages) by Mark Richards, Neal Ford, and Raju Gandhi dissecting real-world architectural patterns, antipatterns, and trade-off matrices.",
+      "toc": [
+        "Parte I: Fundamentos del análisis de Trade-offs y acoplamiento",
+        "Parte II: Patrones de particionamiento técnico vs particionamiento por dominio",
+        "Parte III: Antipatrones clásicos (El Monolito Distribuido, la Trampa de Orquestación, el Abuso de Eventos)",
+        "Parte IV: Evolución arquitectónica en sistemas asistidos por IA"
+      ],
+      "glossary": [
+        {
+          "term": "Domain vs Technical Partitioning",
+          "category": "Arquitectura",
+          "definition": "Contraste entre organizar el código por capas técnicas (controladores, servicios, persistencia) frente a organizarlo por capacidades de negocio verticales autocontenidas."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:9798868829680",
+      "title": "Breaking the Model Context Protocol: Agentic Attacks and Defenses for MCP‑Powered AI Systems",
+      "title_es": "Rompiendo el Model Context Protocol: Ataques y Defensas para Sistemas MCP",
+      "authors": [
+        "Thejes sree Satheesh kumar",
+        "Srinivasan Sekar"
+      ],
+      "publishers": [
+        "Apress"
+      ],
+      "display_format": "book",
+      "marketing_type": "book",
+      "channel_bucket": "early-releases",
+      "topic_slug": "security-gov",
+      "tags": [
+        "mcp",
+        "security",
+        "red-teaming",
+        "agents"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/9798868829680/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9798868829680/",
+      "publication_date": "2026-08-25",
+      "page_count": 285,
+      "summary_es": "Primer manual especializado (285 págs.) en seguridad ofensiva y defensiva del protocolo MCP: analiza ataques de suplantación de herramientas (Tool Poisoning / Rug Pulls), inyección a través de Resources y cómo blindar clientes y servidores MCP.",
+      "summary_en": "Dedicated security guide examining tool poisoning, rug-pull attacks, resource injection, and defensive hardening for MCP-powered agent systems.",
+      "toc": [
+        "1. Superficie de ataque en la arquitectura Host-Client-Server de MCP",
+        "2. Tool Poisoning y modificación maliciosa de descripciones de herramientas",
+        "3. Aislamiento de transporte, validación de esquemas JSON y listas de control",
+        "4. Auditoría continua y detección de anomalías en llamadas JSON-RPC"
+      ],
+      "glossary": [
+        {
+          "term": "MCP Tool Poisoning",
+          "category": "Seguridad MCP",
+          "definition": "Ataque en el que la descripción de una herramienta externa incluye instrucciones ocultas diseñadas para manipular el razonamiento del modelo cuando lee el catálogo de tools."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:9781836206514",
+      "title": "Rust for C++ Developers",
+      "title_es": "Rust para Desarrolladores de C++: Memoria, Concurrencia y Rendimiento",
+      "authors": [
+        "Dan Olson"
+      ],
+      "publishers": [
+        "Packt Publishing"
+      ],
+      "display_format": "book",
+      "marketing_type": "book",
+      "channel_bucket": "early-releases",
+      "topic_slug": "webgpu-cpp-rust",
+      "tags": [
+        "rust",
+        "cpp",
+        "systems-programming"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/9781836206514/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9781836206514/",
+      "publication_date": "2026-03-30",
+      "page_count": 318,
+      "summary_es": "Guía comparativa directa para ingenieros de C++ que adoptan Rust: traduce mentalmente RAII, punteros inteligentes, plantillas y semántica de movimiento al sistema de ownership, lifetimes, traits e interoperabilidad FFI sin coste de abstracción.",
+      "summary_en": "Practical comparative guide translating C++ RAII, smart pointers, templates, and move semantics into Rust ownership, lifetimes, traits, and FFI.",
+      "toc": [
+        "1. De RAII y std::unique_ptr al Borrow Checker y Lifetimes en tiempo de compilación",
+        "2. Polimorfismo estático: Templates y Concepts de C++20/26 frente a Traits y Generics",
+        "3. Concurrencia sin carreras de datos (Send y Sync) e interoperabilidad C++/Rust"
+      ],
+      "glossary": [
+        {
+          "term": "Zero-Cost Abstractions",
+          "category": "Sistemas (C++/Rust)",
+          "definition": "Principio compartido por C++ y Rust según el cual las abstracciones de alto nivel se resuelven en compilación sin penalización en tiempo de ejecución."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:9798341660182",
+      "title": "Web Performance Engineering in the Age of AI",
+      "title_es": "Ingeniería de Rendimiento Web en la Era de la IA",
+      "authors": [
+        "Addy Osmani"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "book",
+      "channel_bucket": "early-releases",
+      "topic_slug": "webgpu-cpp-rust",
+      "tags": [
+        "web-performance",
+        "webgpu",
+        "addy-osmani"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/9798341660182/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9798341660182/",
+      "publication_date": "2026-02-19",
+      "page_count": 256,
+      "summary_es": "Libro de Addy Osmani (256 págs., 2026) sobre optimización de aplicaciones web modernas: Core Web Vitals (LCP, INP), renderizado diferido con content-visibility, especulación de navegación, WebAssembly y descarga de cómputo intensivo a la GPU mediante WebGPU.",
+      "summary_en": "Addy Osmani’s 2026 guide to modern web performance engineering, covering Core Web Vitals, content-visibility, speculation rules, WebAssembly, and WebGPU compute offloading.",
+      "toc": [
+        "1. Optimización de Interaction to Next Paint (INP) y cesión del hilo principal",
+        "2. Renderizado progresivo y content-visibility en interfaces densas en datos",
+        "3. Cómputo en el cliente: Cuándo usar Web Workers, WebAssembly y WebGPU Shaders"
+      ],
+      "glossary": [
+        {
+          "term": "Interaction to Next Paint (INP)",
+          "category": "Rendimiento Web",
+          "definition": "Métrica oficial de capacidad de respuesta que mide la latencia de todas las interacciones del usuario hasta que el navegador presenta el siguiente fotograma."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:9798868827099",
+      "title": "The Database Safari: Exploring Vector, Time‑Series, Graph, Columnar/OLAP, and Geospatial Databases in the Wild",
+      "title_es": "El Safari de las Bases de Datos: Vectoriales, Series Temporales, Grafos y OLAP",
+      "authors": [
+        "Gabor Koos"
+      ],
+      "publishers": [
+        "Apress"
+      ],
+      "display_format": "book",
+      "marketing_type": "book",
+      "channel_bucket": "early-releases",
+      "topic_slug": "data-rag",
+      "tags": [
+        "databases",
+        "vector-db",
+        "olap",
+        "graph"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/9798868827099/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9798868827099/",
+      "publication_date": "2026-09-25",
+      "page_count": 364,
+      "summary_es": "Recorrido arquitectónico (septiembre de 2026) por las estructuras internas de almacenamiento y motores de consulta especializados: índices HNSW para vectores, árboles LSM para series temporales, motores columnares vectorizados y grafos de propiedades.",
+      "summary_en": "Architectural tour through specialized database internals: HNSW vector indexes, LSM-trees for time-series, vectorized columnar OLAP, and property graphs.",
+      "toc": [
+        "1. Motores relacionales extensibles (PostgreSQL + pgvector) frente a motores dedicados",
+        "2. Ejecución vectorizada SIMD en bases de datos columnares (DuckDB / ClickHouse)",
+        "3. Grafos de conocimiento combinados con búsqueda semántica (GraphRAG)"
+      ],
+      "glossary": [
+        {
+          "term": "HNSW (Hierarchical Navigable Small World)",
+          "category": "Búsqueda Vectorial",
+          "definition": "Estructura de grafo multicapa para búsqueda aproximada de vecinos más cercanos (ANN) con complejidad logarítmica."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:book:9781098179915",
+      "title": "Observability Engineering, 2nd Edition",
+      "title_es": "Ingeniería de Observabilidad, 2.ª Edición (Era de IA y OpenTelemetry)",
+      "authors": [
+        "Charity Majors",
+        "Liz Fong-Jones",
+        "George Miranda"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "book",
+      "marketing_type": "book",
+      "channel_bucket": "early-releases",
+      "topic_slug": "cloud-observability",
+      "tags": [
+        "observability",
+        "opentelemetry",
+        "devops"
+      ],
+      "url": "https://learning.oreilly.com/library/view/-/9781098179915/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9781098179915/",
+      "publication_date": "2026-06-16",
+      "page_count": 632,
+      "summary_es": "Segunda edición ampliada (junio de 2026, 632 págs.) del clásico de Charity Majors, Liz Fong-Jones y George Miranda: incorpora OpenTelemetry como estándar unificado, eventos de alta cardinalidad y observabilidad de flujos no deterministas de LLMs y agentes.",
+      "summary_en": "Expanded 2nd Edition (June 2026) by Charity Majors, Liz Fong-Jones, and George Miranda covering OpenTelemetry, high-cardinality events, and LLM/agent observability.",
+      "toc": [
+        "1. Eventos estructurados de alta cardinalidad y alta dimensionalidad",
+        "2. Instrumentación nativa con OpenTelemetry y correlación de trazas",
+        "3. Depuración de sistemas agénticos y bucles de inferencia en producción"
+      ],
+      "glossary": [
+        {
+          "term": "Alta Cardinalidad (High Cardinality)",
+          "category": "Observabilidad",
+          "definition": "Dimensión de telemetría con millones de valores únicos (como IDs de sesión, usuario, commit o traza de agente) indispensable para aislar fallos específicos."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:collection:1bfed212-658b-46bb-92a5-1d40586a3630",
+      "title": "Radar Trends to Watch 2026",
+      "title_es": "Expert Playlist: Radar Trends to Watch 2026 (Colección Anual)",
+      "authors": [
+        "Mike Loukides"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "playlist",
+      "marketing_type": "expert playlist",
+      "channel_bucket": "playlists-courses",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "expert-playlist",
+        "radar",
+        "trends"
+      ],
+      "url": "https://learning.oreilly.com/playlists/1bfed212-658b-46bb-92a5-1d40586a3630/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/1bfed212-658b-46bb-92a5-1d40586a3630/",
+      "publication_date": "2026-10-15",
+      "summary_es": "Lista oficial actualizada mensualmente por Mike Loukides que agrupa todas las entregas de Radar Trends to Watch de 2026 junto con los libros y charlas clave referenciados en cada boletín.",
+      "summary_en": "Official playlist curated by Mike Loukides collecting all 2026 Radar Trends to Watch reports and companion resources.",
+      "toc": [
+        "1. Radar Trends to Watch: October 2026",
+        "2. Radar Trends to Watch: September & August 2026",
+        "3. Radar Trends to Watch: Primer semestre 2026 y lecturas complementarias"
+      ],
+      "glossary": [
+        {
+          "term": "Curación Editorial Continua",
+          "category": "Gestión del Conocimiento",
+          "definition": "Selección viva mantenida por un editor de dominio que filtra el ruido bibliográfico y conecta informes mensuales con obras de referencia."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:collection:2358a1db-a791-4048-b2d0-083f77977cbb",
+      "title": "SA Superstream: Building Architectures for Agents (and Humans)",
+      "title_es": "Expert Playlist: Arquitecturas para Agentes y Humanos (por Neal Ford)",
+      "authors": [
+        "Neal Ford"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "playlist",
+      "marketing_type": "expert playlist",
+      "channel_bucket": "playlists-courses",
+      "topic_slug": "software-arch",
+      "tags": [
+        "expert-playlist",
+        "architecture",
+        "neal-ford"
+      ],
+      "url": "https://learning.oreilly.com/playlists/2358a1db-a791-4048-b2d0-083f77977cbb/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/2358a1db-a791-4048-b2d0-083f77977cbb/",
+      "publication_date": "2026-09-15",
+      "summary_es": "Lista de estudio curada por Neal Ford como preparación y complemento de la conferencia Software Architecture Superstream: reúne capítulos seleccionados sobre arquitectura evolutiva, contratos de servicios y diseño de sistemas agénticos.",
+      "summary_en": "Expert playlist curated by Neal Ford pairing foundational software architecture chapters with modern agentic system design.",
+      "toc": [
+        "1. Fundamentos de Arquitectura de Software y análisis de Trade-offs",
+        "2. Building Evolutionary Architectures (Fitness Functions)",
+        "3. Integración de agentes autónomos en arquitecturas orientadas a eventos"
+      ],
+      "glossary": [
+        {
+          "term": "Arquitectura Evolutiva",
+          "category": "Arquitectura de Software",
+          "definition": "Diseño que soporta cambios guiados e incrementales a través de múltiples dimensiones mediante funciones de aptitud automatizadas."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:collection:41d96ba4-76c3-4c91-9c28-1ff44b742d74",
+      "title": "Infrastructure & Ops Superstream: Agentic Observability",
+      "title_es": "Expert Playlist: Observabilidad Agéntica e Infraestructura (por Sam Newman)",
+      "authors": [
+        "Sam Newman"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "playlist",
+      "marketing_type": "expert playlist",
+      "channel_bucket": "playlists-courses",
+      "topic_slug": "cloud-observability",
+      "tags": [
+        "expert-playlist",
+        "observability",
+        "sam-newman"
+      ],
+      "url": "https://learning.oreilly.com/playlists/41d96ba4-76c3-4c91-9c28-1ff44b742d74/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/41d96ba4-76c3-4c91-9c28-1ff44b742d74/",
+      "publication_date": "2026-09-03",
+      "summary_es": "Selección de Sam Newman (autor de Building Microservices) centrada en cómo monitorizar, trazar y operar sistemas distribuidos donde los agentes toman decisiones de enrutamiento y auto-remediación.",
+      "summary_en": "Sam Newman’s curated playlist on monitoring, tracing, and operating distributed systems featuring autonomous agents.",
+      "toc": [
+        "1. Telemetría semántica para llamadas a modelos y herramientas MCP",
+        "2. Correlación de trazas OpenTelemetry en sistemas multi-agente",
+        "3. Control de bucles infinitos y presupuestos de latencia/coste"
+      ],
+      "glossary": [
+        {
+          "term": "Agentic Trace Span",
+          "category": "OpenTelemetry",
+          "definition": "Unidad de traza distribuida que registra el prompt de entrada, las herramientas invocadas, los tokens consumidos y la latencia de un paso de agente."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:audiobook:9781663761064",
+      "title": "The Effective Software Engineer",
+      "title_es": "El Ingeniero de Software Efectivo (Audiolibro Completo)",
+      "authors": [
+        "Addy Osmani",
+        "Joshua Macrae"
+      ],
+      "publishers": [
+        "Ascent Audio"
+      ],
+      "display_format": "audiobook",
+      "marketing_type": "audiobook",
+      "channel_bucket": "playlists-courses",
+      "topic_slug": "software-arch",
+      "tags": [
+        "audiobook",
+        "addy-osmani",
+        "engineering-leadership"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/9781663761064/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9781663761064/",
+      "publication_date": "2026-09-29",
+      "duration_sec": 37287,
+      "summary_es": "Audiolibro íntegro (10h 21m, publicado el 29 de septiembre de 2026) de Addy Osmani sobre los hábitos mentales, la toma de decisiones arquitectónicas, la comunicación técnica clara y el apalancamiento inteligente de herramientas de IA en la carrera de ingeniería.",
+      "summary_en": "Full 10.3-hour audiobook by Addy Osmani on architectural decision-making, clear technical communication, and high-leverage software engineering.",
+      "toc": [
+        "Parte 1: Enfoque en impacto real frente a complejidad accidental",
+        "Parte 2: Claridad en el diseño de sistemas y documentación ejecutiva",
+        "Parte 3: Liderazgo técnico, mentoría y multiplicación del equipo con IA"
+      ],
+      "glossary": [
+        {
+          "term": "Complejidad Accidental vs Esencial",
+          "category": "Ingeniería de Software",
+          "definition": "Distinción formulada por Fred Brooks y retomada por Osmani entre la dificultad inherente al problema de dominio y la fricción creada por nuestras propias herramientas."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:video:9780135905494",
+      "title": "Build AI Agents with Model Context Protocol (MCP)",
+      "title_es": "Curso en Vídeo: Construcción de Agentes de IA con Model Context Protocol (MCP)",
+      "authors": [
+        "Bruce Hopkins"
+      ],
+      "publishers": [
+        "Pearson"
+      ],
+      "display_format": "video",
+      "marketing_type": "on-demand course",
+      "channel_bucket": "playlists-courses",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "structured-learning",
+        "course",
+        "mcp"
+      ],
+      "url": "https://learning.oreilly.com/videos/-/9780135905494/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9780135905494/",
+      "publication_date": "2026-04-24",
+      "duration_sec": 9009,
+      "summary_es": "Curso estructurado bajo demanda (2h 30m) de Bruce Hopkins que guía paso a paso en la construcción de servidores y clientes MCP en TypeScript y Python, conectando modelos locales y en la nube con fuentes de datos empresariales.",
+      "summary_en": "On-demand 2.5-hour video course by Bruce Hopkins on building MCP servers and clients in TypeScript and Python.",
+      "toc": [
+        "Lección 1: Fundamentos del protocolo MCP y SDKs oficiales",
+        "Lección 2: Creación de servidores MCP con acceso a bases de datos SQLite y APIs REST",
+        "Lección 3: Construcción de un cliente MCP propio e inspección de tráfico JSON-RPC"
+      ],
+      "glossary": [
+        {
+          "term": "MCP Inspector",
+          "category": "Herramientas MCP",
+          "definition": "Utilidad de depuración interactiva que permite probar Tools, Resources y Prompts de un servidor MCP verificando las respuestas JSON-RPC."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:learning-plan:0642572305673",
+      "title": "Agentic Coding",
+      "title_es": "Skill Plan Oficial: Programación Agéntica (Agentic Coding)",
+      "authors": [
+        "O'Reilly Media"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "learning-plan",
+      "marketing_type": "skill plan",
+      "channel_bucket": "skills-labs",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "skill-plan",
+        "agentic-coding"
+      ],
+      "url": "https://learning.oreilly.com/skill/-/0642572305673/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572305673/",
+      "publication_date": "2026-09-01",
+      "summary_es": "Itinerario formativo oficial de O’Reilly (Explore Skills) que estructura libros, talleres en vivo y laboratorios para dominar la programación asistida y delegada en agentes autónomos.",
+      "summary_en": "Official O’Reilly Skill Plan structuring books, live workshops, and labs to master agentic coding.",
+      "toc": [
+        "Etapa 1: Fundamentos de ingeniería de contexto y reglas de repositorio",
+        "Etapa 2: Integración de herramientas con Model Context Protocol (MCP)",
+        "Etapa 3: Verificación automatizada, revisión de código y seguridad"
+      ],
+      "glossary": [
+        {
+          "term": "Skill Plan (Itinerario de Habilidad)",
+          "category": "Aprendizaje O’Reilly",
+          "definition": "Ruta curada multiformato que combina capítulos de libros, vídeos cortos y escenarios interactivos para adquirir una competencia verificable."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:scenario:9798341660793",
+      "title": "Implementing a Task Queue in PostgreSQL",
+      "title_es": "Laboratorio Interactivo: Implementación de una Cola de Tareas en PostgreSQL",
+      "authors": [
+        "Haki Benita"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "scenario",
+      "marketing_type": "lab",
+      "channel_bucket": "skills-labs",
+      "topic_slug": "data-rag",
+      "tags": [
+        "content-scenario",
+        "lab",
+        "postgresql"
+      ],
+      "url": "https://learning.oreilly.com/scenarios/-/9798341660793/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9798341660793/",
+      "publication_date": "2026-06-18",
+      "summary_es": "Escenario práctico interactivo ejecutable en el navegador creado por Haki Benita: enseña a construir una cola de trabajos concurrente de alto rendimiento en PostgreSQL usando FOR UPDATE SKIP LOCKED sin añadir brokers externos.",
+      "summary_en": "Interactive browser-based lab by Haki Benita on building a high-concurrency task queue in PostgreSQL using FOR UPDATE SKIP LOCKED.",
+      "toc": [
+        "Paso 1: Diseño del esquema de la tabla de trabajos e índices parciales",
+        "Paso 2: Concurrencia sin bloqueos mediante SELECT ... FOR UPDATE SKIP LOCKED",
+        "Paso 3: Gestión de reintentos, visibilidad y limpieza de tareas completadas"
+      ],
+      "glossary": [
+        {
+          "term": "FOR UPDATE SKIP LOCKED",
+          "category": "PostgreSQL Internals",
+          "definition": "Cláusula SQL que bloquea las filas seleccionadas para su procesado e ignora instantáneamente aquellas ya bloqueadas por otros workers concurrentes."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:live-event-series:0642572438319",
+      "title": "Claude Certified Architect – Foundations Exam Prep: A Two-Hour Crash Course",
+      "title_es": "Preparación Certificación: Claude Certified Architect (Crash Course de 2 Horas)",
+      "authors": [
+        "Lucas Soares"
+      ],
+      "publishers": [
+        "O'Reilly Media, Inc."
+      ],
+      "display_format": "live-event-series",
+      "marketing_type": "live course",
+      "channel_bucket": "skills-labs",
+      "topic_slug": "ai-agents-mcp",
+      "tags": [
+        "structured-learning",
+        "certification",
+        "claude",
+        "architecture"
+      ],
+      "url": "https://learning.oreilly.com/live-events/-/0642572438319/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/0642572438319/",
+      "publication_date": "2026-10-15",
+      "live_event_start_dates": [
+        "2026-12-15T13:00:00Z"
+      ],
+      "summary_es": "Curso intensivo oficial de preparación para el nuevo examen Claude Certified Architect – Foundations, impartido por Lucas Soares: repasa diseño de prompts de sistema, caché de prefijos, uso de herramientas MCP, evaluación y seguridad.",
+      "summary_en": "Two-hour intensive exam prep course led by Lucas Soares for the Claude Certified Architect – Foundations certification.",
+      "toc": [
+        "Dominio 1: Arquitectura de modelos, ventanas de contexto y Prompt Caching",
+        "Dominio 2: Diseño de agentes, delegación y Model Context Protocol (MCP)",
+        "Dominio 3: Evaluaciones (Evals), mitigación de alucinaciones y seguridad empresarial"
+      ],
+      "glossary": [
+        {
+          "term": "Claude Certified Architect",
+          "category": "Certificaciones IA",
+          "definition": "Acreditación técnica introducida en 2026 que valida el dominio arquitectónico de sistemas multi-agente, MCP, optimización de latencia/coste y seguridad."
+        }
+      ]
+    },
+    {
+      "ourn": "urn:orm:certs-practice-exam:9780135475713",
+      "title": "AI-102: Designing and Implementing a Microsoft Azure AI Solution (Pearson Practice Test)",
+      "title_es": "Examen de Práctica Oficial: Microsoft Azure AI Engineer (AI-102)",
+      "authors": [
+        "Pearson IT"
+      ],
+      "publishers": [
+        "Pearson IT Certification"
+      ],
+      "display_format": "certs-practice-exam",
+      "marketing_type": "practice test",
+      "channel_bucket": "skills-labs",
+      "topic_slug": "cloud-observability",
+      "tags": [
+        "practice-exam",
+        "certification",
+        "azure-ai"
+      ],
+      "url": "https://learning.oreilly.com/certifications/9780135475713/?orm_source=mcp",
+      "image_url": "https://learning.oreilly.com/covers/9780135475713/",
+      "publication_date": "2026-05-19",
+      "summary_es": "Simulador interactivo de examen oficial en O’Reilly Certifications para validar conocimientos de arquitectura de soluciones de IA en la nube, búsqueda vectorial, visión por computador y agentes.",
+      "summary_en": "Interactive practice exam simulator on O’Reilly for the Microsoft Azure AI Engineer (AI-102) certification.",
+      "toc": [
+        "1. Planificación y gestión de servicios de inferencia y gobernanza",
+        "2. Implementación de soluciones de generación aumentada por recuperación (RAG)",
+        "3. Orquestación de agentes y monitorización de seguridad"
+      ],
+      "glossary": [
+        {
+          "term": "Groundedness Evaluation",
+          "category": "Evaluación RAG",
+          "definition": "Métrica que verifica qué proporción de las afirmaciones de la respuesta generada está respaldada directamente por las fuentes recuperadas."
+        }
+      ]
+    }
+  ]
+}

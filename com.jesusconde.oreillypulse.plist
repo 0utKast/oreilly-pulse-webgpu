@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.jesusconde.oreillypulse</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/homebrew/bin/node</string>
+    <string>--no-warnings</string>
+    <string>/Volumes/MisAppsV/oreilly_pulse/server.js</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Volumes/MisAppsV/oreilly_pulse</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>PORT</key>
+    <string>3050</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>StandardOutPath</key>
+  <string>/Volumes/MisAppsV/oreilly_pulse/data/server.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Volumes/MisAppsV/oreilly_pulse/data/server.log</string>
+</dict>
+</plist>

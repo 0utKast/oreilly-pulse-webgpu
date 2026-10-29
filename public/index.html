@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('oreilly_pulse_scheme');
+        if (saved === 'light' || saved === 'dark') {
+          document.querySelector('meta[name="color-scheme"]').setAttribute('content', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <title>O'Reilly Pulse · Radar, Live Events &amp; MCP Intelligence Hub</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- =================================================================== -->
+    <!-- BARRA LATERAL IZQUIERDA: CANALES DE FORMATO + ÁREAS TÉCNICAS MCP    -->
+    <!-- =================================================================== -->
+    <aside class="sidebar" aria-label="Navegación del ecosistema O'Reilly">
+      <div class="brand-header">
+        <div class="brand-mark">O’R</div>
+        <div class="brand-copy">
+          <h1>O’Reilly Pulse</h1>
+          <p>MCP · Radar · Live · Glosarios IA</p>
+        </div>
+      </div>
+
+      <div class="sidebar-cta-row">
+        <button id="openBriefingBtn" class="btn-primary-glow" type="button">
+          <span>✦ Informes &amp; Radar GPU</span>
+        </button>
+        <button id="openMcpExplorerBtn" class="btn-secondary-outline" type="button" title="Consultar cualquier tema o autor en vivo contra el servidor MCP de O'Reilly">
+          <span>🔎 Explorador MCP en Vivo</span>
+        </button>
+      </div>
+
+      <div class="sidebar-scroll">
+        <section class="nav-section">
+          <div class="nav-section-header">
+            <span>ECOSISTEMA O’REILLY</span>
+            <span id="totalCatalogBadge" class="badge-subtle">0</span>
+          </div>
+          <ul id="channelNavList" class="nav-list">
+            <li>
+              <button type="button" class="nav-item active" data-channel="all">
+                <span class="nav-icon">🔥</span>
+                <span class="nav-label">Pulso Global O’Reilly</span>
+                <span class="nav-count" data-count-channel="all">0</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-item" data-channel="radar">
+                <span class="nav-icon">📡</span>
+                <span class="nav-label">O’Reilly Radar &amp; Trends</span>
+                <span class="nav-count" data-count-channel="radar">0</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-item" data-channel="live-upcoming">
+                <span class="nav-icon">🗓️</span>
+                <span class="nav-label">Agenda Live &amp; Conferencias</span>
+                <span class="nav-count badge-live" data-count-channel="live-upcoming">0</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-item" data-channel="replays">
+                <span class="nav-icon">🎬</span>
+                <span class="nav-label">Charlas &amp; Eventos Grabados</span>
+                <span class="nav-count" data-count-channel="replays">0</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-item" data-channel="early-releases">
+                <span class="nav-icon">🚀</span>
+                <span class="nav-label">Early Releases &amp; Reports</span>
+                <span class="nav-count" data-count-channel="early-releases">0</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-item" data-channel="playlists-courses">
+                <span class="nav-icon">🎧</span>
+                <span class="nav-label">Expert Playlists &amp; Audio</span>
+                <span class="nav-count" data-count-channel="playlists-courses">0</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-item" data-channel="skills-labs">
+                <span class="nav-icon">🧪</span>
+                <span class="nav-label">Explore Skills, Labs &amp; Certs</span>
+                <span class="nav-count" data-count-channel="skills-labs">0</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-item" data-channel="saved">
+                <span class="nav-icon">⭐</span>
+                <span class="nav-label">Mi Biblioteca Guardada</span>
+                <span class="nav-count" data-count-channel="saved">0</span>
+              </button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="nav-section">
+          <div class="nav-section-header">
+            <span>ÁREAS TÉCNICAS (RADARES MCP)</span>
+            <button id="openAddTopicBtn" type="button" class="btn-mini-add" title="Añadir nueva Área Técnica de O'Reilly o búsqueda MCP personalizada">
+              + Añadir Área
+            </button>
+          </div>
+          <ul id="topicNavList" class="nav-list"></ul>
+        </section>
+      </div>
+
+      <footer class="sidebar-footer">
+        <div class="status-indicators">
+          <span class="status-pill"><span class="dot dot-ok"></span> MCP O’Reilly Activo</span>
+          <span id="ollamaStatusPill" class="status-pill"><span class="dot"></span> IA Local</span>
+        </div>
+        <div id="lastSyncText" class="sync-timestamp">Sincronizado con catálogo O’Reilly</div>
+      </footer>
+    </aside>
+
+    <!-- =================================================================== -->
+    <!-- COLUMNA CENTRAL: BARRA DE CONTROL, CINTA EN VIVO Y REJILLA MAGAZINE -->
+    <!-- =================================================================== -->
+    <main class="feed-column">
+      <header class="topbar">
+        <div class="topbar-title-area">
+          <h2 id="currentViewTitle">🔥 Pulso Global O’Reilly</h2>
+          <p id="currentViewSubtitle">Seguimiento en tiempo real de O’Reilly Radar, Conferencias en Vivo, Grabaciones, Early Releases y Glosarios IA</p>
+        </div>
+
+        <div class="topbar-controls">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Buscar en títulos, ponentes, glosarios técnicos, ISBN/OURN..."
+              autocomplete="off"
+            />
+          </div>
+
+          <button id="toggleUnreadBtn" type="button" class="btn-chip" title="Mostrar únicamente elementos pendientes de revisar">
+            Solo no leídos
+          </button>
+
+          <button id="markAllReadBtn" type="button" class="btn-chip" title="Marcar los elementos visibles como leídos">
+            ✓ Marcar leídos
+          </button>
+
+          <button id="syncMcpBtn" type="button" class="btn-chip btn-sync" title="Sincronizar con el servidor MCP de O'Reilly y el feed de O'Reilly Radar">
+            ↻ Sincronizar MCP
+          </button>
+
+          <button id="themeToggleBtn" type="button" class="btn-chip" aria-label="Alternar tema claro u oscuro">
+            🌗 Tema
+          </button>
+        </div>
+      </header>
+
+      <!-- Cinta de subfiltros rápidos por formato de O'Reilly -->
+      <div class="subfilter-bar" role="toolbar" aria-label="Filtros por tipo de contenido">
+        <div class="subfilter-chips" id="formatFilterBar">
+          <button type="button" class="chip active" data-format="">Todos los formatos</button>
+          <button type="button" class="chip" data-format="conference">🎥 Conferencias &amp; Superstreams</button>
+          <button type="button" class="chip" data-format="live-event-series">🗓️ Eventos en Directo</button>
+          <button type="button" class="chip" data-format="early-release">🚀 Early Releases</button>
+          <button type="button" class="chip" data-format="report">📊 Informes Ejecutivos &amp; Radar</button>
+          <button type="button" class="chip" data-format="interview">🎙️ Live with Tim O’Reilly &amp; Coloquios</button>
+          <button type="button" class="chip" data-format="playlist">🎧 Expert Playlists</button>
+          <button type="button" class="chip" data-format="scenario">🧪 Labs Interactivos</button>
+        </div>
+        <div class="view-mode-switch">
+          <button type="button" id="viewMagazineBtn" class="chip active" title="Vista Revista con portadas y glosarios">Revista</button>
+          <button type="button" id="viewCompactBtn" class="chip" title="Vista Compacta de alta densidad">Compacta</button>
+        </div>
+      </div>
+
+      <!-- Cinta superior de Próximos Eventos en Vivo (con cuenta atrás en tiempo real) -->
+      <section id="upcomingLiveSpotlight" class="live-spotlight-strip" aria-label="Próximos eventos en vivo destacados"></section>
+
+      <!-- Contenedor principal de tarjetas -->
+      <section id="itemsContainer" class="cards-grid" aria-live="polite"></section>
+    </main>
+
+    <!-- =================================================================== -->
+    <!-- PANEL DERECHO: INSPECTOR DE PROFUNDIZACIÓN, TEMARIO Y GLOSARIO IA   -->
+    <!-- =================================================================== -->
+    <aside id="readerDrawer" class="reader-drawer" aria-label="Panel de profundización, temario y glosario técnico">
+      <div id="readerEmptyState" class="reader-empty">
+        <div class="empty-orb">O’R</div>
+        <h3>Inspector de Profundización y Glosarios</h3>
+        <p>Selecciona cualquier artículo de <strong>O’Reilly Radar</strong>, conferencia grabada (<em>Superstream</em>, <em>AI Codecon</em>, <em>Live with Tim O’Reilly</em>), próximo taller en directo o libro <em>Early Release</em> para explorar:</p>
+        <ul class="empty-checklist">
+          <li>📖 <strong>Resumen Ejecutivo en Español</strong> y desglose de sesiones o capítulos (TOC).</li>
+          <li>📚 <strong>Glosario Técnico</strong> con la definición precisa de los conceptos introducidos en el evento o libro.</li>
+          <li>✦ <strong>Dossier Completo IA (Gemma 4)</strong> exportable a Markdown o informe imprimible, con enlace directo a O’Reilly Learning.</li>
+        </ul>
+      </div>
+
+      <div id="readerContent" class="reader-content" hidden>
+        <header class="reader-header">
+          <div class="reader-badges" id="readerBadges"></div>
+          <div class="reader-actions">
+            <button id="readerSaveBtn" type="button" class="btn-icon" title="Guardar en Mi Biblioteca">☆ Guardar</button>
+            <button id="readerReadBtn" type="button" class="btn-icon" title="Alternar estado leído/no leído">✓ Leído</button>
+            <button id="readerExportMdBtn" type="button" class="btn-icon" title="Descargar Dossier y Glosario en Markdown (.md)">⬇ .MD</button>
+            <button id="readerPrintBtn" type="button" class="btn-icon" title="Abrir vista de informe técnico imprimible">🖨️ Informe</button>
+          </div>
+        </header>
+
+        <div class="reader-hero">
+          <img id="readerCover" class="reader-cover" src="" alt="Portada O'Reilly" loading="lazy" />
+          <div class="reader-hero-meta">
+            <h2 id="readerTitle"></h2>
+            <p id="readerOriginalTitle" class="reader-orig-title"></p>
+            <div id="readerAuthors" class="reader-authors"></div>
+            <div id="readerMetaLine" class="reader-meta-line"></div>
+            <div class="reader-cta-group">
+              <a id="readerOfficialLink" href="#" target="_blank" rel="noopener noreferrer" class="btn-oreilly-external">
+                Abrir en O’Reilly Learning ↗
+              </a>
+              <button id="readerDeepDiveBtn" type="button" class="btn-ai-deep">
+                ✦ Profundizar con IA Local
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pestañas del Inspector -->
+        <nav class="reader-tabs" role="tablist">
+          <button type="button" class="reader-tab active" data-tab="overview">📖 Resumen &amp; Sesiones</button>
+          <button type="button" class="reader-tab" data-tab="glossary">📚 Glosario Técnico (<span id="readerGlossaryCount">0</span>)</button>
+          <button type="button" class="reader-tab" data-tab="dossier">✦ Dossier Ejecutivo &amp; Notas</button>
+        </nav>
+
+        <div id="tabPanelOverview" class="reader-tab-panel active">
+          <div id="readerLiveScheduleBox" class="live-schedule-box" hidden></div>
+          <div class="reader-section">
+            <h4>Síntesis Ejecutiva en Español</h4>
+            <p id="readerSummaryEs" class="reader-summary-text"></p>
+          </div>
+          <div class="reader-section">
+            <h4>Estructura de Sesiones / Capítulos (TOC)</h4>
+            <ol id="readerTocList" class="reader-toc-list"></ol>
+          </div>
+          <div class="reader-section">
+            <h4>Ficha Bibliográfica Canónica (MCP)</h4>
+            <div id="readerBiblioCard" class="biblio-card"></div>
+          </div>
+        </div>
+
+        <div id="tabPanelGlossary" class="reader-tab-panel" hidden>
+          <div class="glossary-header-banner">
+            <p>Conceptos arquitectónicos, patrones y términos clave extraídos de este recurso para facilitar su estudio y seguimiento:</p>
+          </div>
+          <div id="readerGlossaryList" class="glossary-list"></div>
+        </div>
+
+        <div id="tabPanelDossier" class="reader-tab-panel" hidden>
+          <div class="dossier-toolbar">
+            <span id="dossierModelLabel" class="badge-subtle">Dossier Estructurado</span>
+            <button id="regenerateDossierBtn" type="button" class="btn-mini-add">↻ Regenerar Dossier con Gemma 4</button>
+          </div>
+          <article id="readerDossierMarkdown" class="dossier-markdown"></article>
+
+          <div class="reader-section user-notes-box">
+            <h4>📝 Mis Notas y Conclusiones Personales</h4>
+            <textarea id="readerUserNote" rows="4" placeholder="Escribe tus apuntes sobre esta charla, libro o arquitectura (indexado automáticamente en SQLite FTS5)..."></textarea>
+            <button id="saveUserNoteBtn" type="button" class="btn-chip">Guardar nota</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL 1: CENTRO DE INFORMES EN VIVO + RADAR WEBGPU/WGSL               -->
+  <!-- ===================================================================== -->
+  <dialog id="briefingDialog" closedby="any" aria-labelledby="briefingDialogTitle" class="modal-dialog modal-xl">
+    <div class="modal-inner">
+      <header class="modal-header">
+        <div>
+          <span class="modal-kicker">INTELIGENCIA EJECUTIVA LOCAL · OLLAMA + WEBGPU COMPUTE &amp; RENDER SHADERS</span>
+          <h2 id="briefingDialogTitle">✦ Pulso Ejecutivo del Ecosistema O’Reilly</h2>
+        </div>
+        <div class="modal-header-actions">
+          <div class="scope-tabs" id="briefingScopeTabs">
+            <button type="button" class="chip active" data-scope="pulse">🔥 Pulso Integral</button>
+            <button type="button" class="chip" data-scope="live">🗓️ Agenda Live</button>
+            <button type="button" class="chip" data-scope="replays">🎬 Conferencias Grabadas</button>
+            <button type="button" class="chip" data-scope="early">🚀 Early Releases &amp; Radar</button>
+          </div>
+          <button id="regenerateBriefingBtn" type="button" class="btn-ai-deep">✦ Sintetizar con Gemma 4</button>
+          <button type="button" class="btn-close-modal" data-close-dialog="briefingDialog" aria-label="Cerrar ventana">✕</button>
+        </div>
+      </header>
+
+      <div class="briefing-grid">
+        <div class="briefing-left-col">
+          <div class="radar-card">
+            <div class="radar-card-header">
+              <span>Espectro de Impacto y Afinidad Semántica (WebGPU WGSL)</span>
+              <span id="gpuComputeBadge" class="badge-subtle">GPU SIMD vec4&lt;f32&gt;</span>
+            </div>
+            <canvas id="pulseRadarCanvas" width="640" height="270"></canvas>
+            <div id="radarHoverCaption" class="radar-caption">
+              Pasa el cursor sobre los nodos del radar para inspeccionar la convergencia de libros, charlas y laboratorios por área técnica.
+            </div>
+          </div>
+
+          <div class="briefing-markdown-box">
+            <div class="dossier-toolbar">
+              <span id="briefingModelBadge" class="badge-subtle">Síntesis O’Reilly Pulse</span>
+            </div>
+            <div id="briefingAiContent" class="dossier-markdown"></div>
+          </div>
+        </div>
+
+        <div class="briefing-right-col">
+          <h3 class="clusters-col-title">Áreas Técnicas y Recursos Destacados</h3>
+          <div id="briefingClustersList" class="clusters-list"></div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL 2: AÑADIR / GESTIONAR ÁREAS TÉCNICAS (PRESETS O'REILLY + LIBRE) -->
+  <!-- ===================================================================== -->
+  <dialog id="topicDialog" closedby="any" aria-labelledby="topicDialogTitle" class="modal-dialog modal-lg">
+    <div class="modal-inner">
+      <header class="modal-header">
+        <div>
+          <span class="modal-kicker">RADARES TEMÁTICOS PERSONALIZABLES · BÚSQUEDA MCP</span>
+          <h2 id="topicDialogTitle">+ Añadir o Gestionar Áreas Técnicas de O’Reilly</h2>
+        </div>
+        <button type="button" class="btn-close-modal" data-close-dialog="topicDialog" aria-label="Cerrar ventana">✕</button>
+      </header>
+
+      <div class="topic-modal-body">
+        <section class="topic-section">
+          <h3>1. Catálogo Oficial de Especialidades O’Reilly (Añadir en 1 Clic)</h3>
+          <p class="section-helper">Áreas preconfiguradas con los filtros de formato, autores canónicos y descriptores exactos del catálogo de O’Reilly Learning:</p>
+          <div id="presetTopicsGrid" class="preset-topics-grid"></div>
+        </section>
+
+        <hr class="modal-divider" />
+
+        <section class="topic-section">
+          <h3>2. Crear Área Técnica Abierta (Consulta MCP Personalizada)</h3>
+          <p class="section-helper">Define cualquier tecnología, framework, certificación o autor para que el cliente MCP local lo monitorice automáticamente:</p>
+          <form id="customTopicForm" class="custom-topic-form">
+            <div class="form-row">
+              <label>
+                <span>Nombre del Área Visible</span>
+                <input type="text" id="topicNameInput" required placeholder="Ej. WebAssembly &amp; Edge Computing" />
+              </label>
+              <label class="small-field">
+                <span>Icono</span>
+                <input type="text" id="topicIconInput" value="🛰️" maxlength="4" />
+              </label>
+              <label class="small-field">
+                <span>Color</span>
+                <input type="color" id="topicColorInput" value="#dc2626" />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                <span>Palabras Clave para Búsqueda MCP (<code>query</code> en inglés)</span>
+                <input type="text" id="topicQueryInput" required placeholder="Ej. WebAssembly WASI Rust serverless edge" />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                <span>Filtrar por Autores de O’Reilly (opcional, separados por coma)</span>
+                <input type="text" id="topicAuthorsInput" placeholder="Ej. Tim O'Reilly, Addy Osmani, Neal Ford" />
+              </label>
+              <label>
+                <span>Formato preferente (opcional)</span>
+                <select id="topicFormatSelect">
+                  <option value="">Todos los formatos (Libros, Vídeos, Live, Labs...)</option>
+                  <option value="live-events">Solo Eventos en Directo (live-events)</option>
+                  <option value="videos">Solo Vídeos y Conferencias Grabadas (videos)</option>
+                  <option value="books">Solo Libros, Early Releases y Reports (books)</option>
+                  <option value="playlists">Solo Expert Playlists (playlists)</option>
+                  <option value="interactive">Solo Labs y Sandboxes Interactivos (interactive)</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary-glow">+ Crear Área y Sincronizar con MCP</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ===================================================================== -->
+  <!-- MODAL 3: EXPLORADOR DIRECTO EN VIVO DEL SERVIDOR MCP DE O'REILLY      -->
+  <!-- ===================================================================== -->
+  <dialog id="mcpExplorerDialog" closedby="any" aria-labelledby="mcpExplorerTitle" class="modal-dialog modal-lg">
+    <div class="modal-inner">
+      <header class="modal-header">
+        <div>
+          <span class="modal-kicker">CONSULTA DIRECTA JSON-RPC · search_oreilly_content</span>
+          <h2 id="mcpExplorerTitle">🔎 Explorador MCP en Vivo de O’Reilly Learning</h2>
+        </div>
+        <button type="button" class="btn-close-modal" data-close-dialog="mcpExplorerDialog" aria-label="Cerrar ventana">✕</button>
+      </header>
+
+      <div class="topic-modal-body">
+        <form id="mcpExplorerForm" class="custom-topic-form">
+          <div class="form-row">
+            <label>
+              <span>Términos técnicos, título o concepto a buscar en O’Reilly MCP</span>
+              <input type="text" id="mcpLiveQueryInput" required placeholder="Ej. Agent Memory, Model Context Protocol, C++26, RAG, Superstream..." />
+            </label>
+            <label>
+              <span>Ordenar por</span>
+              <select id="mcpLiveOrderSelect">
+                <option value="date_published">Más recientes (date_published)</option>
+                <option value="relevance">Relevancia (relevance)</option>
+                <option value="date_added">Recién añadidos / Early Releases (date_added)</option>
+                <option value="upcoming_events">Próximos Eventos en Vivo (upcoming_events)</option>
+                <option value="popularity">Más populares (popularity)</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>Filtrar por Autor (opcional)</span>
+              <input type="text" id="mcpLiveAuthorInput" placeholder="Ej. Neal Ford, Mike Loukides, Addy Osmani..." />
+            </label>
+            <label>
+              <span>Asignar al Área Técnica en tu Biblioteca</span>
+              <select id="mcpLiveTargetTopicSelect"></select>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" id="mcpLiveSubmitBtn" class="btn-primary-glow">🚀 Lanzar Consulta MCP e Incorporar al Catálogo</button>
+          </div>
+        </form>
+
+        <div id="mcpLiveResultsStatus" class="mcp-live-status"></div>
+        <div id="mcpLiveResultsList" class="clusters-list"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/webgpu-pulse.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+services:
+  oreilly-pulse:
+    build: .
+    container_name: oreilly-pulse-webgpu
+    ports:
+      - "3050:3050"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

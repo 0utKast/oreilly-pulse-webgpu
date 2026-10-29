@@ -1,0 +1,12 @@
+{
+  "name": "oreilly-pulse-webgpu",
+  "version": "1.0.0",
+  "description": "Centro de Inteligencia Local-First para el ecosistema O'Reilly Learning & O'Reilly Radar con Cliente MCP Nativo, SQLite FTS5, Dossiers/Glosarios IA (Ollama/Gemma 4) y Radar WebGPU/WGSL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --no-warnings server.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  }
+}
